@@ -1,0 +1,40 @@
+
+
+Variables
+===========================================
+
+
+Routes
+============================================
+
+
+MySQL 
+============================================
+Username: project2
+no password
+Database Name:  redeployDB
+
+Tables
+1)Accounts
+    name    
+    address
+    city
+    state
+    zipcode
+    contact-name
+    phone-number
+    fax-number
+    email
+    charity (boolean)
+
+2)Donations
+    item description
+    quantity
+    unit
+    status
+
+3)Login
+    account-id
+    username
+    password
+
