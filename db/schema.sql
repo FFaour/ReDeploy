@@ -1,3 +1,4 @@
+DROP DATABASE IF EXISTS redeployDB;
 CREATE DATABASE redeployDB;
 USE redeployDB;
 
