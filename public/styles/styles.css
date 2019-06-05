@@ -1,3 +1,335 @@
-.list-group-item {
-  line-height: 2.5;
+body{
+  background-color:rgb(240, 234, 223);
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+#jumbo1{
+  background-image:url(https://static01.nyt.com/images/2019/04/16/multimedia/16venezuelaaid-sub/merlin_153613149_581c8705-18ef-4a0b-b650-e7d014872790-superJumbo.jpg?quality=90&auto=webp); 
+  background-position: 0px;
+  background-size: cover;
+  height: 325px;
+  min-height:100%;
+ 
+  
+
+}
+
+.jumbotron{
+  background-color: rgb(9, 9, 71);
+  color: aliceblue;
+  text-align: center;
+  height: 470px;
+}
+
+#menu{
+position: absolute;
+top:10px;
+
+}
+
+#map{
+  position:absolute;
+  top: 0px;
+  left: 0px;
+}
+
+#fb{
+  position: absolute;
+  left:220px;
+}
+
+#fb2{
+  position: absolute;
+  left:-78px;
+}
+
+#card1{
+  background-image:url(https://wfxl.com/resources/media/b89bb0bd-51ec-4944-b059-40551e50fb41-large16x9_1118FoodDonations.jpg?1479483261738);
+
+
+}
+
+.motioncard1:hover{
+margin-top: -5px;
+margin-left: -5px;
+/* border:2px solid red; */
+
+}
+
+.motioncard2:hover{
+  margin-top: -5px;
+  margin-left: -5px;
+  /* border:2px solid red; */
+  
+  }
+
+  .motioncard3:hover{
+    margin-top: -5px;
+    margin-left: -5px;
+    /* border:2px solid red; */
+    
+    }
+
+  
+
+#card2{
+  background-image:url(https://vancityblog.azureedge.net/wp-content/uploads/2016/12/GiveHands-iStock-Blog-1280x620-1280x620.jpg);
+  background-size: cover;
+  background-position: -75px;
+  
+}
+
+#card3{
+  background-image:url(https://i0.wp.com/www.directrelief.org/wp-content/uploads/2019/04/pic5.jpg?resize=1280%2C720px&ssl=1);
+  background-position: -85px;
+}
+
+#card4{
+  background-image:url(../images/map.PNG);
+  background-position: -85px;
+}
+
+#card5{
+  background-color: navy;
+  color: aliceblue;
+  text-align: left;
+}
+
+
+.card-body{
+  height: 222px;
+  
+}
+
+
+
+#card{
+ border-top: 5px solid navy;
+}
+
+#btn1{
+  position:absolute;
+  bottom: 18px;
+  left: 86px;
+  width: 50%;
+  }
+
+#btn2{
+position:absolute;
+bottom: 18px;
+left: 86px;
+width: 50%;
+}
+
+#btn3{
+  position:absolute;
+  bottom: 18px;
+  left: 86px;
+  width: 50%;
+  }
+
+h1{
+  text-align: center;
+  border-top: 5px solid navy;
+}
+  
+  
+
+h2{
+  text-align: center;
+  
+}
+
+.icon{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+}
+
+#footer{
+  border-top: 5px solid navy;
+  
+}
+
+#chat{
+  position: fixed;
+  top: 50%;
+  left: 2%;
+}
+
+#map2{
+display: none;
+}
+
+html{
+  min-height:100%;
+
+}
+
+#color{
+  color: rgb(53, 53, 250);
+  cursor: pointer;
+  
+}
+
+#color1{
+  color: rgb(53, 53, 250);
+  cursor: pointer;
+  
+}
+
+
+
+#login{
+  text-align: left;
+}
+
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: blue;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 15%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.cancelbtn2 {
+  /* width: auto;
+  padding: 10px 18px; */
+  background-color: blue;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: gray;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+@media only screen and (max-width:640px){
+  #map2{
+    display:block;
+  }
+  #map1{
+    display: none;
+  }
 }

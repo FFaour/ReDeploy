@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../public/styles/styles.css" media="screen" title="no title" charset="utf-8">
+  <title>Home Page</title>
+</head>
+
+
+<body>
+ 
+  <!-- Main jumbotron/header-->
+  <div class="jumbotron" id="jumbo1">
+    <div class="container">
+       <h5><font color="red">RE</font></h5><img src="http://clipart-library.com/img1/685573.jpg" alt="Avatar" style="width:150px; height:150px;" class="avatar"><h5>Deploy</h5>
+    </div>
+  </div>
+  <!-- Main Jumbotron/Header end -->
+  
+  
+ 
+  
+  <!--Live chat -->
+  <div class="row" id="chat">
+    <div class=" col-lg-1">
+      
+      <div class="icon"><img src="https://freepngimg.com/thumb/live_chat/10-2-live-chat-png-file.png" alt="Heart Icon" style="width:60px; height:60px;"></div>
+      
+    </div>
+  </div>
+  <!-- Live chat ends -->
+
+  
+  <!-- Nav bar in header -->
+  <nav class="my-2 my-md-0 mr-md-3" id="menu">
+    <a class="p-2" href="#card5">| Contact|</a>
+    <a class="p-2" href="#card5">Location |</a>
+    <a class="p-2" href="#us">Mission |</a>
+    <a class="p-2" href="#card">Donate  |</a>
+    <a class="p-2" id="color" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login |</a>
+    <a class="p-2" id="color1" onclick="document.getElementById('signUp').style.display='block'" style="width:auto;">Sign up  |</a>
+    </nav>
+    <!-- Nav bar in header ends -->
+
+    
+    <!-- <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button> -->
+
+     
+    
+
+    <!-- Login Modal info -->
+    <div id="id01" class="modal">
+      
+      <form class="modal-content animate" action="/action_page.php">
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+          <h5><font color="red">RE</font></h5><img src="http://clipart-library.com/img1/685573.jpg" alt="Avatar" style="width:100px; height:100px;" class="avatar"><h5>Deploy</h5>
+        </div>
+    
+        <div class="container" id="login">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+    
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+            
+          <button type="submit">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+        </div>
+    
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+      </form>
+    </div>
+    <!--Login Modal info ends-->
+
+    
+    <br>
+    <br>
+    
+     <!-- Sign up Modal  -->
+     <!-- <div id="signUp" class="modal">
+        
+         <form class="modal-content animate" action="/action_page.php">
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('signUp').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <h5><font color="red">RE</font></h5><img src="http://clipart-library.com/img1/685573.jpg" alt="Avatar" style="width:100px; height:100px;" class="avatar"><h5>Deploy</h5>
+          </div> 
+       -->
+          <!-- <div class="container" id="login">
+            <label for="uname"><b>First and Last Name</b></label>
+            <input type="text" placeholder="Item Name/Description" name="uname" required>
+      
+            <label for="psw"><b>Street Address</b></label>
+            <input type="text" placeholder="Enter Quantity" name="psw" required>
+
+            <label for="psw"><b>State</b></label>
+            <input type="text" placeholder="Unit" name="psw" required>
+
+            <label for="psw"><b>Zipcode</b></label>
+            <input type="text" placeholder="Status" name="psw" required>
+
+            <label for="psw"><b>Contact name</b></label>
+            <input type="text" placeholder="Status" name="psw" required>
+
+            <label for="psw"><b>Phone number</b></label>
+            <input type="text" placeholder="Status" name="psw" required>
+
+            <label for="psw"><b>Fax number</b></label>
+            <input type="text" placeholder="Status" name="psw" required>
+
+            <label for="psw"><b>Email</b></label> 
+            <input type="text" placeholder="Status" name="psw" required>
+
+            <label for="psw"><b>If a Charity please state yes</b></label>
+            <input type="text" placeholder="Status" name="psw" required>
+              
+            <button type="submit">Submit</button>
+            
+            <button type="button" onclick="document.getElementById('signUp').style.display='none'" class="cancelbtn2">Cancel</button>
+         
+        </form> -->
+      <!-- </div>  -->
+        <!-- Sign up modal ends -->
+    
+    
+    <!--3 Card body-->
+    
+    
+    <div class="container" id="card">
+      <br>
+      <br>
+      <br>
+      <div class="card-deck mb-3 text-center">
+        <div class="card mb-4 shadow-sm motioncard1"> 
+          <div class="card-header motioncard1">
+            <h4 class="my-0 font-weight-normal">Donate Supplies</h4>
+          </div>
+          <div class="card-body" id="card1">
+              
+               <button onclick="document.getElementById('id02').style.display='block'" id="btn1">Click to Donate</button>
+             </div>
+            </div>
+            
+        <div class="card mb-4 shadow-sm motioncard2">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Monetary Donations </h4>
+          </div>
+          <div class="card-body" id="card2">
+              <!-- <button onclick="document.getElementById('id03').style.display='block'" style="width:auto;">Login</button> -->
+                 <button onclick="document.getElementById('id03').style.display='block'" id="btn2">Click to Donate</button>
+             </div>
+           </div>
+
+        <div class="card mb-4 shadow-sm motioncard3">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Charities</h4>
+          </div>
+          <div class="card-body" id="card3">
+            
+            <button onclick="document.getElementById('id04').style.display='block'" id="btn3">Click for List</button>
+          </div>
+        </div>
+
+
+        <!-- Modal Forms for the cards -->
+        <div id="id02" class="modal">
+        
+            <form class="modal-content animate" action="/action_page.php">
+              <div class="imgcontainer">
+                <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <h5><font color="red">RE</font></h5><img src="http://clipart-library.com/img1/685573.jpg" alt="Avatar" style="width:100px; height:100px;" class="avatar"><h5>Deploy</h5>
+              </div>
+          
+              <div class="container" id="login">
+                <label for="uname"><b>Item Description</b></label>
+                <input type="text" placeholder="Item Name/Description" name="uname" required>
+          
+                <label for="psw"><b>Quantity</b></label>
+                <input type="password" placeholder="Enter Quantity" name="psw" required>
+  
+                <label for="psw"><b>Unit</b></label>
+                <input type="password" placeholder="Unit" name="psw" required>
+  
+                <label for="psw"><b>Status</b></label>
+                <input type="password" placeholder="Status" name="psw" required>
+                  
+                <button type="submit">Submit</button>
+                
+                <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn2">Cancel</button>
+             
+            </form>
+          </div>
+          <!--Model card 3-->
+          <div id="id03" class="modal">
+        
+              <form class="modal-content animate" action="/action_page.php">
+                <div class="imgcontainer">
+                  <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+                  <h5><font color="red">RE</font></h5><img src="http://clipart-library.com/img1/685573.jpg" alt="Avatar" style="width:100px; height:100px;" class="avatar"><h5>Deploy</h5>
+                </div>
+            
+                <div class="container" id="login">
+                  <label for="uname"><b>Enter Amount of Donation</b></label>
+                  <input type="text" placeholder="Item Name/Description" name="" required>
+            
+                  <label for="psw"><b>Name on Card</b></label>
+                  <input type="text" placeholder="Enter Card Type" name="" required>
+    
+                  <label for="psw"><b>Card Number</b></label>
+                  <input type="text" placeholder="Enter Card Number" name="" required>
+    
+                  <label for="psw"><b>Zipcode</b></label>
+                  <input type="text" placeholder="Enter Zip Code" name="" required>
+
+                  <label for="psw"><b>CSC Code</b></label>
+                  <input type="text" placeholder="Enter CSC code" name="" required>
+
+                  
+                  <label for="psw"><b>If a Charity please state yes</b></label>
+                  <input type="text" placeholder="Enter YEs/No" name="psw" required>
+                    
+                  <button type="submit">Submit</button>
+                  
+                  <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn2">Cancel</button>
+               
+              </form>
+            </div>
+          <!-- Modal for cards end -->
+      </div>
+     </div> 
+     <!--3 card body ends-->
+
+     <br>
+     <br>
+     <br>
+
+
+
+        
+        
+        
+        
+        <!-- Our mission 3 columns cards -->
+          <div class="container marketing">
+
+            <div class="row" id="us">
+              <div class="col-lg-12">
+                <h1>Mission and Values:</h1>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="icon"><img src="http://clipart-library.com/images/yikrLMzET.png" alt="Heart Icon" style="width:80px; height:80px;"></div>
+               
+                <h2>Compassion</h2>
+                <p>We believe in medical relief for all humanity.</p>
+                
+              </div>
+              <div class="col-lg-4">
+                <div class="icon"><img src="http://accessinfotechindia.com/wp-content/uploads/2016/12/Commitment-icons-150x150.png" alt="Heart Icon" style="width:80px; height:80px;"></div>
+                
+                <h2>Commitment</h2>
+                <p>We are committed to operational excellence and delivery for every client.</p>
+                
+              </div>
+              <div class="col-lg-4">
+                <div class="icon"><img src="http://businesskeeda.com/asset/images/teamwork.svg" alt="Heart Icon" style="width:80px; height:80px;"></div>
+               
+                <h2>Collaboration</h2>
+                <p>
+                    We partner with charities that uphold trusted reputations and maintain dedication to the ailing needs of the world.</p>
+               
+              </div>
+            </div>
+          
+            <!--Our Mission 3 columns cards ends-->
+      
+            
+      
+            
+        
+            <!-- Footer -->
+            <footer class="pt-4 my-md-5 pt-md-5 border-top" id="footer">
+
+                <div class="card-deck mb-3 text-center">
+                  <!-- <div class="rows"> -->
+                    <div class="card mb-4 shadow-sm  order-md-2" id="map1">
+                      
+                      <div class="card-body" id="card4">
+                       <!-- map image is inside -->
+                        
+                      </div>
+                    </div>
+                   
+    
+    
+                    <div class="card mb-4 shadow-sm  order-md-1">
+                      <div class="card-header">
+                        <h4 class="my-0 font-weight-normal">contact info</h4>
+                      </div>
+                      <div class="card-body" id="card5">
+                          
+                          <ul>
+                            <li><h5>Address: 210 Technology Cir, Savannah, GA 31407</h5></li>
+                            <li><h5>Phone Number: (912) 966-7922</h5></li>
+                            <li><h5>Email: ThisIsNotReal@aol.com</h5></li>
+                          </ul>
+                          
+                         </div>
+    
+                         
+                       </div>
+                       <!-- </div> -->
+                       <div class="card mb-4 shadow-sm  order-md-2" id="map2">
+                      
+                          <div class="card-body" id="card4">
+                           <!-- map image is inside -->
+                            
+                          </div>
+                        </div>
+                       
+                     </div>
+    
+    
+                       
+                     &copy;2019
+               
+                    </footer>
+                  </div>
+                  
+                  
+                  
+                  
+                  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                  <script src="../../public/js/index.js"></script>
+                  </body>
+                  
+                  </html>
+                
