@@ -20,13 +20,12 @@ CREATE TABLE donations
 (
     item_description VARCHAR (255) NOT NULL,
     quantity INT NOT NULL,
-    unit VARCHAR (255) NOT NULL,
-    status VARCHAR (255) NOT NULL
+    unit VARCHAR (255) NOT NULL   
 );
 
 CREATE TABLE login 
 (
-    account_id INT NOT NULL,
+    account_id INT NOT NULL AUTO_INCREMENT,
     username VARCHAR (255) NOT NULL,
     password VARCHAR (255) NOT NULL,
     PRIMARY KEY (account_id)
