@@ -28,7 +28,7 @@ CREATE TABLE donations
 CREATE TABLE login 
 (
     account_id INT NOT NULL AUTO_INCREMENT,
-    username VARCHAR (255) NOT NULL,
+    username VARCHAR (255) NOT NULL UNIQUE,
     password VARCHAR (255) NOT NULL,
     PRIMARY KEY (account_id)
 );
