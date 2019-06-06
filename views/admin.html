@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../public/styles/styles.css" media="screen" title="no title" charset="utf-8">
+  <title>Admin Page</title>
+</head>
+
+<!--Header bar starts-->
+<body id="id02">
+        <nav class="navbar navbar-dark fixed-top flex-md-nowrap p-0 shadow">
+                <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#"><font color="red">RE</font>+Deploy</a>
+                <!-- <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"> -->
+                <ul class="navbar-nav px-3">
+                  <li class="nav-item text-nowrap">
+                    <a class="nav-link" href="../views/layouts/index.html">Sign out</a>
+                  </li>
+                </ul>
+              </nav>
+              
+              <div class="container-fluid">
+                <div class="row">
+                  <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+                    <div class="sidebar-sticky">
+                      <ul class="nav flex-column">
+                          <!-- Header bar ends -->
+
+                          <br>
+                          <br>
+                          <br>
+                        <!-- Side nav bar starts -->
+                        <li class="nav-item">
+                                <a class="nav-link" id="color2"onclick="document.getElementById('shippingLabels').style.display='block'" style="width:auto;">
+                            <span data-feather="file"></span>
+                            shipping labels
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="color3"href="#">
+                            <span data-feather="shopping-cart"></span>
+                            
+                          </a>
+                        </li>
+                        <!-- <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button> -->
+                        <li class="nav-item">
+                          <a class="nav-link" id="color4"onclick="document.getElementById('adminDonations').style.display='block'" style="width:auto;">
+                            <span data-feather="users"></span>
+                             Donations
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="color5"onclick="document.getElementById('monetaryDonations').style.display='block'" style="width:auto;">
+                            <span data-feather="bar-chart-2"></span>
+                            Monetary Donations
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="color6"onclick="document.getElementById('adminMonet').style.display='block'" style="width:auto;">
+                            <span data-feather="layers"></span>
+                            Live Chat
+                          </a>
+                        </li>
+                      </ul>
+                      
+                       </ul>
+                     </div>
+                   </nav>
+               
+                   <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                       <h1 class="h2">Dashboard</h1>
+                       <div class="btn-toolbar mb-2 mb-md-0">
+                             
+                            </div>
+                          </div>
+                          <!-- Side nav bar ends -->
+                                                              
+                    <h2>Live Dashboard</h2>
+
+
+                          <!-- Donations Starts -->
+                    <div class="container">
+                            <div id="adminDonations" class="modal">
+                              
+                               <form class="modal-content animate" action="/action_page.php">
+                                <div class="imgcontainer">
+                                  <span onclick="document.getElementById('adminDonations').style.display='none'" class="close" title="Close Modal">&times;</span>
+                                  <h5><font color="red">RE</font></h5><img src="http://clipart-library.com/img1/685573.jpg" alt="Avatar" style="width:100px; height:100px;" class="avatar"><h5>Deploy</h5>
+                                </div> 
+
+                                <div class="table-responsive">
+                      <table class="table table-striped table-sm">
+                        <thead>
+                          <tr>
+                            <th>#</th>
+                            <th>Item Description</th>
+                            <th>Quantity</th>
+                            <th>Unit</th>
+                            <th>Status</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1,001</td>
+                            <td>Lorem</td>
+                            <td>ipsum</td>
+                            <td>dolor</td>
+                            <td> <select class="custom-select d-block w-100" id="charity" required>
+                                    <option value="">Choose...</option>
+                                    <option>sent</option>
+                                    <option>not sent</option>
+                                  </select>
+                                  <div class="invalid-feedback">
+                                    Please provide a valid Answer.
+                                  </div></td>
+                          </tr>
+                          <tr>
+                                <th>#</th>
+                                <th>Item Description</th>
+                                <th>Quantity</th>
+                                <th>Unit</th>
+                                <th>Status</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1,001</td>
+                                <td>Lorem</td>
+                                <td>ipsum</td>
+                                <td>dolor</td>
+                                <td> <select class="custom-select d-block w-100" id="charity" required>
+                                        <option value="">Choose...</option>
+                                        <option>sent</option>
+                                        <option>not sent</option>
+                                      </select>
+                                      <div class="invalid-feedback">
+                                        Please provide a valid Answer.
+                                      </div></td>
+                              </tr>
+                              <tr>
+                                    <th>#</th>
+                                    <th>Item Description</th>
+                                    <th>Quantity</th>
+                                    <th>Unit</th>
+                                    <th>Status</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>1,001</td>
+                                    <td>Lorem</td>
+                                    <td>ipsum</td>
+                                    <td>dolor</td>
+                                    <td> <select class="custom-select d-block w-100" id="charity" required>
+                                            <option value="">Choose...</option>
+                                            <option>sent</option>
+                                            <option>not sent</option>
+                                          </select>
+                                          <div class="invalid-feedback">
+                                            Please provide a valid Answer.
+                                          </div></td>
+                                  </tr>
+                                  <tr>
+                                        <th>#</th>
+                                        <th>Item Description</th>
+                                        <th>Quantity</th>
+                                        <th>Unit</th>
+                                        <th>Status</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>1,001</td>
+                                        <td>Lorem</td>
+                                        <td>ipsum</td>
+                                        <td>dolor</td>
+                                        <td> <select class="custom-select d-block w-100" id="charity" required>
+                                                <option value="">Choose...</option>
+                                                <option>sent</option>
+                                                <option>not sent</option>
+                                              </select>
+                                              <div class="invalid-feedback">
+                                                Please provide a valid Answer.
+                                              </div></td>
+                                      </tr>
+                                      <tr>
+                                            <th>#</th>
+                                            <th>Item Description</th>
+                                            <th>Quantity</th>
+                                            <th>Unit</th>
+                                            <th>Status</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>1,001</td>
+                                            <td>Lorem</td>
+                                            <td>ipsum</td>
+                                            <td>dolor</td>
+                                            <td> <select class="custom-select d-block w-100" id="charity" required>
+                                                    <option value="">Choose...</option>
+                                                    <option>sent</option>
+                                                    <option>not sent</option>
+                                                  </select>
+                                                  <div class="invalid-feedback">
+                                                    Please provide a valid Answer.
+                                                  </div></td>
+                                          </tr>
+                                          <tr>
+                                                <th>#</th>
+                                                <th>Item Description</th>
+                                                <th>Quantity</th>
+                                                <th>Unit</th>
+                                                <th>Status</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr>
+                                                <td>1,001</td>
+                                                <td>Lorem</td>
+                                                <td>ipsum</td>
+                                                <td>dolor</td>
+                                                <td> <select class="custom-select d-block w-100" id="charity" required>
+                                                        <option value="">Choose...</option>
+                                                        <option>sent</option>
+                                                        <option>not sent</option>
+                                                      </select>
+                                                      <div class="invalid-feedback">
+                                                        Please provide a valid Answer.
+                                                      </div></td>
+                                              </tr>
+                         
+                        </tbody>
+                      </table>
+                    </div>
+                    
+                    <button type="button" id="test1" onclick="document.getElementById('adminDonations').style.display='none'" class="cancelbtn2">Cancel</button>
+                  </main>
+                </div>
+              </div>
+            </form> 
+           </div> 
+          </div>  
+
+          <!-- Donations Ends -->
+
+
+
+                   
+                           <!--Shipping label modal-->
+          <div class="container">
+                <div id="shippingLabels" class="modal">
+              
+                    <form class="modal-content animate" action="/action_page.php">
+                      <div class="imgcontainer">
+                        <span onclick="document.getElementById('shippingLabels').style.display='none'" class="close" title="Close Modal">&times;</span>
+                        <h5><font color="red">RE</font></h5><img src="http://clipart-library.com/img1/685573.jpg" alt="Avatar" style="width:100px; height:100px;" class="avatar"><h5>Deploy</h5>
+                      </div>
+                      <img src="../public/images/nextDay.jpg" alt="Girl in a jacket" style="width:369px;height:284px;">
+
+                      <br>
+                      <br>
+                      <br>
+
+                      <img src="../public/images/express.jpg" alt="Girl in a jacket" style="width:517px;height:443px;">
+                      
+                          
+                        <button type="submit">Print Label</button>
+                        
+                        <button type="button" onclick="document.getElementById('shippingLabels').style.display='none'" class="cancelbtn2">Cancel</button>
+                     
+                    </form>
+                  </div>
+                </div> 
+                                    <!--Shipping Label Modal ends  -->
+
+
+
+                                    <!-- Monetary Donations Starts -->
+                                    <div class="container">
+                                            <div id="monetaryDonations" class="modal">
+                                          
+                                                <form class="modal-content animate" action="/action_page.php">
+                                                  <div class="imgcontainer">
+                                                    <span onclick="document.getElementById('monetaryDonations').style.display='none'" class="close" title="Close Modal">&times;</span>
+                                                    <h5><font color="red">RE</font></h5><img src="http://clipart-library.com/img1/685573.jpg" alt="Avatar" style="width:100px; height:100px;" class="avatar"><h5>Deploy</h5>
+                                                  </div>
+                                                  
+                                                  <div class="table-responsive">
+                                                        <table class="table table-striped table-sm">
+                                                          <thead>
+                                                            <tr>
+                                                              <th>#</th>
+                                                              <th>Amount</th>
+                                                              <th>charity</th>
+                                                              
+                                                            </tr>
+                                                          </thead>
+                                                          <tbody>
+                                                            <tr>
+                                                              <td>1</td>
+                                                              <td>$200.00</td>
+                                                              <td>Red Cross</td>
+                                                              
+                                                            </tr>
+                                                            <tr>
+                                                                  <th>#</th>
+                                                                  <th>Amount</th>
+                                                                  <th>Charity</th>
+                                                                  
+                                                                </tr>
+                                                              </thead>
+                                                              <tbody>
+                                                                <tr>
+                                                                  <td>2</td>
+                                                                  <td>$750.00</td>
+                                                                  <td>AmeriCare</td>
+                                                                  
+                                                                </tr>
+                                                                <tr>
+                                                                      <th>#</th>
+                                                                      <th>Amount</th>
+                                                                      <th>Charity</th>
+                                                                      
+                                                                    </tr>
+                                                                  </thead>
+                                                                  <tbody>
+                                                                        <tr>
+                                                                          <td>3</td>
+                                                                          <td>$35.00</td>
+                                                                          <td>Direct Relief</td>
+                                                                          
+                                                                        </tr>
+                                                                    </table>
+                                                                  </div>
+                                                                  <button type="button" id="test1" onclick="document.getElementById('monetaryDonations').style.display='none'" class="cancelbtn2">Cancel</button>
+                                                                </main>
+                                                              </div>
+                                                            </div>
+                                                                 
+                                                          </form> 
+                                                        </div>
+                                                      </div> 
+                                                      <!--Monetary Donations End -->
+                                                        
+                                                                  
+                                                      
+                               
+        </body>
+        </html>
