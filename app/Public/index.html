@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../../public/styles/styles.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="../public/styles/styles.css" media="screen" title="no title" charset="utf-8">
   <title>Home Page</title>
 </head>
 
@@ -39,9 +39,9 @@
     <a class="p-2" href="#card5">Location |</a>
     <a class="p-2" href="#us">Mission |</a>
     <a class="p-2" href="#card">Donate  |</a>
-    <a class="p-2" id="color" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login |</a>
+    <a class="p-2" id="color" onclick="document.getElementById('mainLogin').style.display='block'" style="width:auto;">Login |</a>
     <a class="p-2" id="color1" onclick="document.getElementById('signUp').style.display='block'" style="width:auto;">Sign up  |</a>
-    <a class="p-2" href="../admin.html">Admin|</a>
+    <a class="p-2" href="../public/admin.html">Admin|</a>
     </nav>
     <!-- Nav bar in header ends -->
 
@@ -52,11 +52,11 @@
     
 
     <!-- Login Modal info -->
-    <div id="id01" class="modal">
+    <div id="mainLogin" class="modal">
       
       <form class="modal-content animate" action="/action_page.php">
         <div class="imgcontainer">
-          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+          <span onclick="document.getElementById('mainLogin').style.display='none'" class="close" title="Close Modal">&times;</span>
           <h5><font color="red">RE</font></h5><img src="http://clipart-library.com/img1/685573.jpg" alt="Avatar" style="width:100px; height:100px;" class="avatar"><h5>Deploy</h5>
         </div>
     
@@ -74,7 +74,7 @@
         </div>
     
         <div class="container" style="background-color:#f1f1f1">
-          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+          <button type="button" onclick="document.getElementById('mainLogin').style.display='none'" class="cancelbtn">Cancel</button>
           <span class="psw">Forgot <a href="#">password?</a></span>
         </div>
       </form>
@@ -152,21 +152,21 @@
       <div class="card-deck mb-3 text-center">
         <div class="card mb-4 shadow-sm motioncard1"> 
           <div class="card-header motioncard1">
-            <h4 class="my-0 font-weight-normal">Donate Supplies</h4>
+            <h4 class="my-0 font-weight-normal">Supplies</h4>
           </div>
           <div class="card-body" id="card1">
               
-               <button onclick="document.getElementById('id02').style.display='block'" id="btn1">Click to Donate</button>
+               <button onclick="document.getElementById('supplies').style.display='block'" id="btn1">Click to Donate</button>
              </div>
             </div>
             
         <div class="card mb-4 shadow-sm motioncard2">
           <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Monetary Donations </h4>
+            <h4 class="my-0 font-weight-normal">Donations </h4>
           </div>
           <div class="card-body" id="card2">
               <!-- <button onclick="document.getElementById('id03').style.display='block'" style="width:auto;">Login</button> -->
-                 <button onclick="document.getElementById('id03').style.display='block'" id="btn2">Click to Donate</button>
+                 <button onclick="document.getElementById('donations').style.display='block'" id="btn2">Click to Donate</button>
              </div>
            </div>
 
@@ -176,18 +176,18 @@
           </div>
           <div class="card-body" id="card3">
             
-            <button onclick="document.getElementById('id04').style.display='block'" id="btn3">Click for List</button>
+            <button onclick="document.getElementById('charities').style.display='block'" id="btn3">Click for List</button>
           </div>
         </div>
 
 
         <!-- Modal Forms for the cards -->
         <div class="container">
-        <div id="id02" class="modal">
+        <div id="supplies" class="modal">
         
             <form class="modal-content animate" action="/action_page.php">
               <div class="imgcontainer">
-                <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <span onclick="document.getElementById('supplies').style.display='none'" class="close" title="Close Modal">&times;</span>
                 <h5><font color="red">RE</font></h5><img src="http://clipart-library.com/img1/685573.jpg" alt="Avatar" style="width:100px; height:100px;" class="avatar"><h5>Deploy</h5>
               </div>
           
@@ -216,18 +216,18 @@
                   
                 <button type="submit">Submit</button>
                 
-                <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn2">Cancel</button>
+                <button type="button" onclick="document.getElementById('supplies').style.display='none'" class="cancelbtn2">Cancel</button>
              
             </form>
           </div>
         </div> 
           <!--Model card 3-->
           <div class="container">
-          <div id="id03" class="modal">
+          <div id="donations" class="modal">
         
               <form class="modal-content animate" action="/action_page.php">
                 <div class="imgcontainer">
-                  <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+                  <span onclick="document.getElementById('donations').style.display='none'" class="close" title="Close Modal">&times;</span>
                   <h5><font color="red">RE</font></h5><img src="http://clipart-library.com/img1/685573.jpg" alt="Avatar" style="width:100px; height:100px;" class="avatar"><h5>Deploy</h5>
                 </div>
             
@@ -260,18 +260,18 @@
                     
                   <button type="submit">Submit</button>
                   
-                  <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn2">Cancel</button>
+                  <button type="button" onclick="document.getElementById('donations').style.display='none'" class="cancelbtn2">Cancel</button>
                
               </form>
             </div>
           </div> 
 
           <div class="container">
-              <div id="id04" class="modal">
+              <div id="charities" class="modal">
             
                   <form class="modal-content animate" action="/action_page.php">
                     <div class="imgcontainer">
-                      <span onclick="document.getElementById('id04').style.display='none'" class="close" title="Close Modal">&times;</span>
+                      <span onclick="document.getElementById('charities').style.display='none'" class="close" title="Close Modal">&times;</span>
                       <h5><font color="red">RE</font></h5><img src="http://clipart-library.com/img1/685573.jpg" alt="Avatar" style="width:100px; height:100px;" class="avatar"><h5>Deploy</h5>
                     </div>
                 <!--AmerCares info-->
@@ -485,24 +485,10 @@
                                         
                                              </footer>
                                            </div>
-
-
-                                           <!-- <div class="col-md-4">
-                                              <label for="state">State</label>
-                                              <select class="custom-select d-block w-100" id="state" required>
-                                                <option value="">Choose...</option>
-                                                <option>California</option>
-                                              </select>
-                                              <div class="invalid-feedback">
-                                                Please provide a valid state.
-                                              </div>
-                                            </div> -->
-
-
-                                                                                      
+                                                                                                                                
                                             
                                            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-                                           <script src="../../public/js/index.js"></script>
+                                           <script src="../public/js/index.js"></script>
                                            </body>
                                            
                                            </html>
