@@ -3,7 +3,7 @@ body{
 }
 
 /* Gives new back ground to cards */
-#id02,#id03,#id04,#signUp{
+#supplies,#donations,#charities,#signUp{
   background-image:url(http://www.westcpapc.com/wp-content/uploads/2014/09/Hands-Holding-World.jpg); 
   background-position: 0px;
   background-size: cover;
