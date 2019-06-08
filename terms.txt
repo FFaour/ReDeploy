@@ -17,7 +17,8 @@ port: 3306
 
 Tables
 1)Accounts
-    name    
+    name  
+    account_id  
     address
     city
     state
@@ -27,6 +28,7 @@ Tables
     fax_number
     email
     charity (boolean)
+    foreign KEY (account_id)
 
 2)Donations
     item_description
@@ -35,8 +37,8 @@ Tables
     status
 
 3)Login
-    account_id
-    username
+    login_id
+    username UNIQUE
     password
-    PRIMARY KEY (account_id)
+    PRIMARY KEY (login_id)
 
