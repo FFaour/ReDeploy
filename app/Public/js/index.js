@@ -1,62 +1,30 @@
 // Get references to page elements
-var $exampleText = $("#example-text");
-var $exampleDescription = $("#example-description");
-var $submitBtn = $("#submit");
-var $exampleList = $("#example-list");
+var $ = $("#submitBtn");
 
 // The API object contains methods for each kind of request we'll make
 var API = {
-  saveExample: function(example) {
+  saveAccount: function(account) {
     return $.ajax({
       headers: {
         "Content-Type": "application/json"
       },
       type: "POST",
-      url: "api/examples",
-      data: JSON.stringify(example)
+      url: "api/accounts",
+      data: JSON.stringify(account)
     });
   },
-  getExamples: function() {
+  getAccount: function() {
     return $.ajax({
-      url: "api/examples",
+      url: "api/accounts",
       type: "GET"
     });
   },
-  deleteExample: function(id) {
+  deleteAccount: function(id) {
     return $.ajax({
-      url: "api/examples/" + id,
+      url: "api/accounts/" + id,
       type: "DELETE"
     });
   }
-};
-
-// refreshExamples gets new examples from the db and repopulates the list
-var refreshExamples = function() {
-  API.getExamples().then(function(data) {
-    var $examples = data.map(function(example) {
-      var $a = $("<a>")
-        .text(example.text)
-        .attr("href", "/example/" + example.id);
-
-      var $li = $("<li>")
-        .attr({
-          class: "list-group-item",
-          "data-id": example.id
-        })
-        .append($a);
-
-      var $button = $("<button>")
-        .addClass("btn btn-danger float-right delete")
-        .text("ｘ");
-
-      $li.append($button);
-
-      return $li;
-    });
-
-    $exampleList.empty();
-    $exampleList.append($examples);
-  });
 };
 
 // handleFormSubmit is called whenever we submit a new example
@@ -64,7 +32,7 @@ var refreshExamples = function() {
 var handleFormSubmit = function(event) {
   event.preventDefault();
 
-  var example = {
+  var account = {
     text: $exampleText.val().trim(),
     description: $exampleDescription.val().trim()
   };
