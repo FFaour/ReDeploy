@@ -32,10 +32,10 @@ var API = {
 var handleFormSubmit = function(event) {
   event.preventDefault();
 
-  var account = {
-    text: $exampleText.val().trim(),
-    description: $exampleDescription.val().trim()
-  };
+  // var account = {
+  //   text: $exampleText.val().trim(),
+  //   description: $exampleDescription.val().trim()
+  // };
 
   if (!(example.text && example.description)) {
     alert("You must enter an example text and description!");
@@ -65,6 +65,4 @@ var handleDeleteBtnClick = function() {
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
-
 //==========================================================================
-// 
