@@ -4,7 +4,10 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../public/styles/styles.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="../Public/styles/styles.css" media="screen" title="no title" charset="utf-8">
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  
   <title>Home Page</title>
 </head>
 
@@ -39,9 +42,8 @@
     <a class="p-2" href="#card5">Location |</a>
     <a class="p-2" href="#us">Mission |</a>
     <a class="p-2" href="#card">Donate  |</a>
-    <a class="p-2" id="color" onclick="document.getElementById('mainLogin').style.display='block'" style="width:auto;">Login |</a>
-    <a class="p-2" id="color1" onclick="document.getElementById('signUp').style.display='block'" style="width:auto;">Sign up  |</a>
     <a class="p-2" href="../public/admin.html">Admin|</a>
+    <a class="p-2" id="color" onclick="document.getElementById('mainLogin').style.display='block'" style="width:auto;">Login |</a>
     </nav>
     <!-- Nav bar in header ends -->
 
@@ -61,13 +63,17 @@
         </div>
     
         <div class="container" id="login">
+          
           <label for="uname"><b>Username</b></label>
           <input type="text" placeholder="Enter Username" name="uname" required>
     
           <label for="psw"><b>Password</b></label>
           <input type="password" placeholder="Enter Password" name="psw" required>
             
-          <button type="submit">Login</button>
+          <button type="submit" id="loginButton">Login</button>
+          <!-- add login verification -->
+      
+
           <label>
             <input type="checkbox" checked="checked" name="remember"> Remember me
           </label>
@@ -75,7 +81,7 @@
     
         <div class="container" style="background-color:#f1f1f1">
           <button type="button" onclick="document.getElementById('mainLogin').style.display='none'" class="cancelbtn">Cancel</button>
-          <span class="psw">Forgot <a href="#">password?</a></span>
+          <span class="psw" id="color1" onclick="document.getElementById('signUp').style.display='block'" style="width:auto;">Create an account</span>
         </div>
       </form>
     </div>
@@ -86,19 +92,23 @@
     <br>
     <br>
     
-     <!-- Sign up Modal  -->
+     <!-- Create Account Modal  -->
      <div class="container">
       <div id="signUp" class="modal">
         
-         <form class="modal-content animate" action="/action_page.php">
+         <form class="modal-content animate">
           <div class="imgcontainer">
             <span onclick="document.getElementById('signUp').style.display='none'" class="close" title="Close Modal">&times;</span>
             <h5><font color="red">RE</font></h5><img src="http://clipart-library.com/img1/685573.jpg" alt="Avatar" style="width:100px; height:100px;" class="avatar"><h5>Deploy</h5>
           </div> 
        
             <div class="container" id="login">
-            <label for="uname"><b>Name</b></label>
-            <input type="text" placeholder="Item Name/Description" name="uname" required>
+
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="" name="uname" required>
+          
+            <label for="psw"><b>Password</b></label>
+            <input type="text" placeholder="" name="psw" required>
       
             <label for="psw"><b>Street Address</b></label>
             <input type="text" placeholder="Enter Street Address" name="psw" required>
@@ -124,14 +134,18 @@
             <label for="state">Charity?</label>
                                               <select class="custom-select d-block w-100" id="charity" required>
                                                 <option value="">Choose...</option>
-                                                <option>Yes</option>
-                                                <option>No</option>
+                                                <option>AmeriCares</option>
+                                                <option>Doctors without Borders</option>
+                                                <option>International Relief Teams</option>
+                                                <option>American Red Cross</option>
+                                                <option>Direct Relief</option>
                                               </select>
                                               <div class="invalid-feedback">
                                                 Please provide a valid Answer.
                                               </div>
               
-            <button type="submit">Submit</button>
+            <button type="submit" id="submitBtn">Submit</button>
+            <!-- add logic for submitting info -->
             
             <button type="button" id="test1" onclick="document.getElementById('signUp').style.display='none'" class="cancelbtn2">Cancel</button>
          
@@ -274,7 +288,7 @@
                       <span onclick="document.getElementById('charities').style.display='none'" class="close" title="Close Modal">&times;</span>
                       <h5><font color="red">RE</font></h5><img src="http://clipart-library.com/img1/685573.jpg" alt="Avatar" style="width:100px; height:100px;" class="avatar"><h5>Deploy</h5>
                     </div>
-                <!--AmerCares info-->
+                <!--AmeriCares info-->
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12">
