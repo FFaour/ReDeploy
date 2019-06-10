@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "2526147480123aCB$",
+    "password": "",
     "database": "redeployDB",
     "host": "localhost",
     "port": 3306,
