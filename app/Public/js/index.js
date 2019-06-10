@@ -1,8 +1,29 @@
-// Get references to page elements
-var $ = $("#submitBtn");
+//Get references to page elements
 
-// The API object contains methods for each kind of request we'll make
-var API = {
+//Account references
+var $userName = $("#userName");
+var $password = $("#password");
+var $organization = $("#organization");
+var $address = $("#address");
+var $state = $("#state");
+var $zipCode = $("#zipCode");
+var $contName = $("#contName");
+var $phoneNum = $("#phoneNum");
+var $faxNum = $("#faxNum");
+var $email = $("#email");
+var $submitAccountBtn = $("#submitAccountBtn");
+var $signUp = $("#signUp");
+
+//Supply references
+var $item = $("#item");
+var $quantity = $("#quantity");
+var $unit = $("#unit");
+var $charity = $("#charity");
+var $submitSupplyBtn = $("#submitSupplyBtn");
+var $supplies = $("#supplies");
+
+// Account method for each kind of request
+var Account = {
   saveAccount: function(account) {
     return $.ajax({
       headers: {
@@ -13,7 +34,7 @@ var API = {
       data: JSON.stringify(account)
     });
   },
-  getAccount: function() {
+  getAccounts: function() {
     return $.ajax({
       url: "api/accounts",
       type: "GET"
@@ -21,48 +42,129 @@ var API = {
   },
   deleteAccount: function(id) {
     return $.ajax({
-      url: "api/accounts/" + id,
+      url: "api/accounts/:id" + id,
       type: "DELETE"
     });
   }
 };
 
-// handleFormSubmit is called whenever we submit a new example
-// Save the new example to the db and refresh the list
-var handleFormSubmit = function(event) {
+//refreshAccounts gets new accounts from the db
+var refreshAccounts = function() {
+  Account.getAccounts(account).then(function() {
+    $signUp.empty();
+  });
+};
+
+// handleAccountSubmit is called whenever we submit a new account
+// Save the new account to the db
+var handleAccountSubmit = function(event) {
   event.preventDefault();
+  var account = {
+    userName: $userName.val().trim(),
+    password: $password.val().trim(),
+    organization: $organization.val().trim(),
+    address: $address.val().trim(),
+    state: $state.val().trim(),
+    zipCode: $zipCode.val().trim(),
+    contName: $contName.val().trim(),
+    phoneNum: $phoneNum.val().trim(),
+    faxNum: $faxNum.val().trim(),
+    email: $email.val().trim()
+  };
 
-  // var account = {
-  //   text: $exampleText.val().trim(),
-  //   description: $exampleDescription.val().trim()
-  // };
-
-  if (!(example.text && example.description)) {
-    alert("You must enter an example text and description!");
+  if (
+    !(
+      account.userName &&
+      account.password &&
+      account.address &&
+      account.state &&
+      account.zipCode &&
+      account.contName &&
+      account.phoneNum &&
+      account.faxNum &&
+      account.email
+    )
+  ) {
+    alert("You must complete entire form!");
     return;
   }
 
-  API.saveExample(example).then(function() {
-    refreshExamples();
+  Account.saveAccount(account).then(function() {
+    refreshAccounts();
   });
 
-  $exampleText.val("");
-  $exampleDescription.val("");
+  $userName.val("");
+  $password.val("");
+  $organization.val("");
+  $address.val("");
+  $state.val("");
+  $zipCode.val("");
+  $contName.val("");
+  $phoneNum.val("");
+  $faxNum.val("");
+  $email.val("");
 };
 
-// handleDeleteBtnClick is called when an example's delete button is clicked
-// Remove the example from the db and refresh the list
-var handleDeleteBtnClick = function() {
-  var idToDelete = $(this)
-    .parent()
-    .attr("data-id");
-
-  API.deleteExample(idToDelete).then(function() {
-    refreshExamples();
+// Supply method for each kind of request
+var Supplies = {
+  saveSupplies: function(supplies) {
+    return $.ajax({
+      headers: {
+        "Content-Type": "application/json"
+      },
+      type: "POST",
+      url: "api/supplies",
+      data: JSON.stringify(supplies)
+    });
+  },
+  getSupplies: function() {
+    return $.ajax({
+      url: "api/supplies",
+      type: "GET"
+    });
+  }
+};
+//refreshSupplies gets new supplies from the db
+var refreshSupplies = function() {
+  Supplies.getSupplies(supplies).then(function() {
+    $supplies.empty();
   });
 };
 
-// Add event listeners to the submit and delete buttons
-$submitBtn.on("click", handleFormSubmit);
-$exampleList.on("click", ".delete", handleDeleteBtnClick);
-//==========================================================================
+// handleSupplySubmit is called whenever we submit new supplies
+// Save the new supplies to the db
+var handleSupplySubmit = function(event) {
+  event.preventDefault();
+  var supply = {
+    item: $item.val().trim(),
+    quantity: $quantity.val().trim(),
+    unit: $unit.val().trim(),
+    charity: $charity.val().trim()
+  };
+
+  if (
+    !(
+      supply.item &&
+      supply.quantity&&
+      supply.unit &&
+      supply.charity &&
+    )
+  ) {
+    alert("You must complete entire form!");
+    return;
+  }
+
+  Supplies.saveAccount(supply).then(function() {
+    refreshSupplies();
+  });
+
+  $item.val("");
+  $quantity.val("");
+  $unit.val("");
+  $charity.val("");
+};
+
+
+// Add event listeners to the submit buttons
+$submitAccountBtn.on("click", handleAccountSubmit);
+$submitSupplyBtn.on("click", handleSupplySubmit);
