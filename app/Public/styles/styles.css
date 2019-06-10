@@ -3,7 +3,7 @@ body{
 }
 
 /* Gives new back ground to cards */
-#supplies,#donations,#charities,#signUp{
+#supplies,#donations,#charities,#signUp,#id02{
   background-image:url(http://www.westcpapc.com/wp-content/uploads/2014/09/Hands-Holding-World.jpg); 
   background-position: 0px;
   background-size: cover;
@@ -12,6 +12,17 @@ body{
 .navbar{
   background-color: rgb(86, 128, 141);
   height: 70px;
+}
+
+#logo{
+  position: absolute;
+  top:0px;
+  left: 490px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+  max-width: 100%;
 }
 
 .bd-placeholder-img {
@@ -136,7 +147,7 @@ margin-left: -5px;
 #btn1{
   position:absolute;
   bottom: 18px;
-  left: 86px;
+  left: 130px;
   width: 50%;
   }
 
@@ -365,4 +376,157 @@ span.psw {
 
 a{
   color: aliceblue;
+}
+
+header{
+  z-index: 999;
+  position: fixed;
+  top: 40vh;
+  left: 740px;
+
+}
+
+
+
+  html{
+      min-height:100%
+  
+  }
+  
+  .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      /* z-index: 1; */
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+      
+    }
+    
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+    
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+    
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+      
+    }
+
+
+    .card{
+      /* z-index: 1; */
+      width: 500px;
+      max-width: 100%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      color: black;
+    }
+
+    #links{
+      color:red;
+    }
+    
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+
+    /* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  /* z-index: 99999; */
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: rgb(240, 234, 223);
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: blue;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+#myForm{
+  z-index: 99999;
+}
+
+#tax{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 45%;
+
 }

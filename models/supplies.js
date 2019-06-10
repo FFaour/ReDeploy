@@ -1,13 +1,16 @@
 module.exports = function(sequelize, DataTypes) {
-  var Donation = sequelize.define("Donation", {
+  var Supplies = sequelize.define("Supplies", {
     // eslint-disable-next-line camelcase
-    item_description: {
+    item: {
       type: DataTypes.STRING,
       notNull: true
     },
     quantity: {
       type: DataTypes.INTEGER,
-      notNull: true
+      notNull: true,
+      validate: {
+        len: [1, 14]
+      }
     },
     unit: {
       type: DataTypes.STRING,
@@ -19,8 +22,9 @@ module.exports = function(sequelize, DataTypes) {
     },
     status: {
       type: DataTypes.STRING,
-      isNull: true
+      isNull: true,
+      defaultValue: "Processing"
     }
   });
-  return Donation;
+  return Supplies;
 };
