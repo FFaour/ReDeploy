@@ -57,7 +57,7 @@
                           </a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" id="color6"onclick="document.getElementById('adminMonet').style.display='block'" style="width:auto;">
+                          <a class="nav-link" id="color6"onclick="openForm()".style.display='block'" style="width:auto;">
                             <span data-feather="layers"></span>
                             Live Chat
                           </a>
@@ -78,6 +78,30 @@
                           <!-- Side nav bar ends -->
                                                               
                     <h2>Live Dashboard</h2>
+
+<!-- Live Chat -->
+<div class="container">
+    <div class="row" id="chat">
+      <div class=" col-lg-1">
+        <div class="chat-popup" id="myForm">
+          <form action="/action_page.php" class="form-container">
+            <h2>Re+Deploy</h2>
+        
+            <label for="msg"><b>Message</b></label>
+            <textarea placeholder="Type message.." name="msg" required></textarea>
+        
+            <button type="submit" class="btn">Send</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+          </form>
+        </div>
+        <!-- <div class="icon"><img src="https://freepngimg.com/thumb/live_chat/10-2-live-chat-png-file.png" alt="Heart Icon" style="width:60px; height:60px;"></div> -->
+        
+        </div>
+      </div>
+    </div> 
+    <!-- live chat ends -->
+              
+        
 
 
                           <!-- Donations Starts -->
@@ -347,6 +371,25 @@
                                                         
                                                                   
                                                       
-                               
-        </body>
-        </html>
+<script>
+function openNav() {
+document.getElementById("mySidenav").style.width = "250px";
+}
+                                                                
+function closeNav() {
+document.getElementById("mySidenav").style.width = "0";
+}
+                                                          
+function openForm() {
+document.getElementById("myForm").style.display = "block";
+}
+                                                          
+function closeForm() {
+document.getElementById("myForm").style.display = "none";
+}
+                                                          
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="..//Public/js/index.js"></script>                            
+</body>
+</html>
