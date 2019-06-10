@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var Donation = sequelize.define("Donation", {
+  var Supplies = sequelize.define("Supplies", {
     // eslint-disable-next-line camelcase
     item_description: {
       type: DataTypes.STRING,
@@ -22,5 +22,5 @@ module.exports = function(sequelize, DataTypes) {
       isNull: true
     }
   });
-  return Donation;
+  return Supplies;
 };
