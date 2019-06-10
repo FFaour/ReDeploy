@@ -94,12 +94,18 @@
           
             <label for="Password"><b>Password</b></label>
             <input type="text" id="password" placeholder="" name="Password" required>
+
+            <label for="Organization"><b>Organization</b></label>
+            <input type="text" id="organization" placeholder="Enter Organization Name" name="Organization">
       
             <label for="Address"><b>Street Address</b></label>
             <input type="text" id="address" placeholder="Enter Street Address" name="Address" required>
 
             <label for="State"><b>State</b></label>
             <input type="text" id="state" placeholder="Enter State" name="State" required>
+
+            <label for="State"><b>City</b></label>
+            <input type="text" id="city" placeholder="Enter City" name="city" required>
 
             <label for="Zip Code"><b>Zipcode</b></label>
             <input type="text" id="zipCode" placeholder="Enter Zip Code" name="Zip Code" required>
@@ -116,20 +122,8 @@
             <label for="Email Address"><b>Email</b></label> 
             <input type="text" id="email" placeholder="Enter Email" name="Email Address" required>
 
-            <label for="state"><b>Charity?</b></Charity></label>
-            <select class="custom-select d-block w-100" id="charity" required>
-              <option value="">Choose...</option>
-              <option>AmeriCares</option>
-              <option>Doctors without Borders</option>
-              <option>International Relief Teams</option>
-              <option>American Red Cross</option>
-              <option>Direct Relief</option>
-            </select>
-            <div class="invalid-feedback">
-              Please provide a valid Answer.
-            </div>
-              
-            <button type="submit" id="submitBtn">Submit</button>
+                          
+            <button type="submit" id="submitAccountBtn">Submit</button>
             <!-- add logic for submitting info -->
             
             <button type="button" id="test1" onclick="document.getElementById('signUp').style.display='none'" class="cancelbtn2">Cancel</button>
@@ -188,40 +182,49 @@
   <div class="container">
   <div id="supplies" class="modal">
   
-      <form class="modal-content animate" action="/action_page.php">
-        <div class="imgcontainer">
-          <span onclick="document.getElementById('supplies').style.display='none'" class="close" title="Close Modal">&times;</span>
-          <h5><font color="red">RE</font></h5><img src="http://clipart-library.com/img1/685573.jpg" alt="Avatar" style="width:100px; height:100px;" class="avatar"><h5>Deploy</h5>
-        </div>
-    
-        <div class="container" id="login">
-          <label for="uname"><b>Item Description</b></label>
-          <input type="text" placeholder="Item Name/Description" name="uname" required>
-    
-          <label for="psw"><b>Quantity</b></label>
-          <input type="password" placeholder="Enter Quantity" name="psw" required>
-          <!-- add drop boxes to unit and status -->
-          <label for="state">Unit</label>
-                                        <select class="custom-select d-block w-100" id="unit" required>
-                                          <option value="">Choose...</option>
-                                          <option>Tube</option>
-                                          <option>Bottle</option>
-                                          <option>Box</option>
-                                          <option>case</option>
-                                          <option>Other</option>
-                                        </select>
-                                        <div class="invalid-feedback">
-                                          Please provide a valid Unit.
-                                        </div>
+      <form class="modal-content animate">
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('supplies').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <h5><font color="red">RE</font></h5><img src="http://clipart-library.com/img1/685573.jpg" alt="Avatar" style="width:100px; height:100px;" class="avatar"><h5>Deploy</h5>
+          </div>
+      
+          <div class="container">
+            <label for="Item"><b>Item Description</b></label>
+            <input type="text" id="item" placeholder="Item Name/Description" name="Item" required>
+      
+            <label for="Quantity"><b>Quantity</b></label>
+            <input type="text" id="quantity" placeholder="Enter Quantity" name="Quantity" required>
+           
+            <label for="unit"><b>Unit</b></label>
+                                          <select class="custom-select d-block w-100" id="unit" required>
+                                            <option value="">Choose...</option>
+                                            <option>Tube</option>
+                                            <option>Bottle</option>
+                                            <option>Box</option>
+                                            <option>case</option>
+                                            <option>Other</option>
+                                          </select>
+                                          <div class="invalid-feedback">
+                                            Please provide a valid Unit.
+                                          </div>
+            <label for="charity"><b>Charity</b></label>
+                                          <select class="custom-select d-block w-100" id="charity" required>
+                                            <option value="">Choose...</option>
+                                            <option>AmeriCares</option>
+                                            <option>Doctors Without Borders</option>
+                                            <option>International Relief Teams</option>
+                                            <option>American Red Cross</option>
+                                            <option>Direct Relief</option>
+                                          </select>
+                                          <div class="invalid-feedback">
+                                            Please provide a valid Unit.
+                                          </div>
 
-          <label for="psw"><b>Status</b></label>
-          <input type="password" placeholder="Status" name="psw" required>
+            <button type="submit" id="submitSupplyBtn">Submit</button>
             
-          <button type="submit">Submit</button>
-          
-          <button type="button" onclick="document.getElementById('supplies').style.display='none'" class="cancelbtn2">Cancel</button>
-       
-      </form>
+            <button type="button" onclick="document.getElementById('supplies').style.display='none'" class="cancelbtn2">Cancel</button>
+         
+        </form>
     </div>
   </div> 
     <!--Model card 3-->
@@ -303,7 +306,7 @@
                   <!--Doc with out borders info-->
                       <div class="row">
                           <div class="col-lg-12">
-                            <h1>Doctors with out Borders</h1>
+                            <h1>Doctors Without Borders</h1>
                           </div>
                         </div>
                     <div class="row">
@@ -344,7 +347,7 @@
                                   <!-- Red Cross info -->
                                   <div class="row">
                                       <div class="col-lg-12">
-                                        <h1>Red Cross</h1>
+                                        <h1>American Red Cross</h1>
                                       </div>
                                     </div>
                                 <div class="row">

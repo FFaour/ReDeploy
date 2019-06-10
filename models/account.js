@@ -1,11 +1,16 @@
 module.exports = function(sequelize, DataTypes) {
-  var Account = sequelize.define("Account", {
+  var Account = sequelize.define("account", {
     id: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
       primaryKey: true,
       isNull: true
     },
+    organization: {
+      type: DataTypes.STRING,
+      isNull: true
+    },
+
     userName: {
       type: DataTypes.STRING,
       notNull: true
@@ -19,6 +24,10 @@ module.exports = function(sequelize, DataTypes) {
       notNull: true
     },
     state: {
+      type: DataTypes.STRING,
+      notNull: true
+    },
+    city: {
       type: DataTypes.STRING,
       notNull: true
     },
@@ -39,10 +48,6 @@ module.exports = function(sequelize, DataTypes) {
       notNull: true
     },
     email: {
-      type: DataTypes.STRING,
-      notNull: true
-    },
-    chartiy: {
       type: DataTypes.STRING,
       notNull: true
     }
