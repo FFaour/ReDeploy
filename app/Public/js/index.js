@@ -1,30 +1,66 @@
 // Get references to page elements
-var $ = $("#submitBtn");
+var $submitSupplyBtn = $("#submitSupplyBtn");
+
+// reference to 'scripts' select list
+// used throughout the examples below
+var charitySel = document.getElementById("charitylist");
+
+// display value property of select list (from selected option)
+console.log(charitySel.value);
 
 // The API object contains methods for each kind of request we'll make
 var API = {
-  saveAccount: function(account) {
+  saveExample: function(example) {
     return $.ajax({
       headers: {
         "Content-Type": "application/json"
       },
       type: "POST",
-      url: "api/accounts",
-      data: JSON.stringify(account)
+      url: "api/examples",
+      data: JSON.stringify(example)
     });
   },
-  getAccount: function() {
+  getExamples: function() {
     return $.ajax({
-      url: "api/accounts",
+      url: "api/examples",
       type: "GET"
     });
   },
-  deleteAccount: function(id) {
+  deleteExample: function(id) {
     return $.ajax({
-      url: "api/accounts/" + id,
+      url: "api/examples/" + id,
       type: "DELETE"
     });
   }
+};
+
+// refreshExamples gets new examples from the db and repopulates the list
+var refreshExamples = function() {
+  API.getExamples().then(function(data) {
+    var $examples = data.map(function(example) {
+      var $a = $("<a>")
+        .text(example.text)
+        .attr("href", "/example/" + example.id);
+
+      var $li = $("<li>")
+        .attr({
+          class: "list-group-item",
+          "data-id": example.id
+        })
+        .append($a);
+
+      var $button = $("<button>")
+        .addClass("btn btn-danger float-right delete")
+        .text("ｘ");
+
+      $li.append($button);
+
+      return $li;
+    });
+
+    $exampleList.empty();
+    $exampleList.append($examples);
+  });
 };
 
 // handleFormSubmit is called whenever we submit a new example
@@ -32,10 +68,10 @@ var API = {
 var handleFormSubmit = function(event) {
   event.preventDefault();
 
-  // var account = {
-  //   text: $exampleText.val().trim(),
-  //   description: $exampleDescription.val().trim()
-  // };
+  var example = {
+    text: $exampleText.val().trim(),
+    description: $exampleDescription.val().trim()
+  };
 
   if (!(example.text && example.description)) {
     alert("You must enter an example text and description!");
@@ -63,6 +99,5 @@ var handleDeleteBtnClick = function() {
 };
 
 // Add event listeners to the submit and delete buttons
-$submitBtn.on("click", handleFormSubmit);
+$submitSupplyBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
-//==========================================================================
