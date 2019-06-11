@@ -21,7 +21,7 @@
             <a class="p-2" href="#card5">Location</a>
             <a class="p-2" href="#us">Mission</a>
             <a class="p-2" href="#card">Donate</a>
-            <a class="p-2" href="../public/admin.html">Admin</a>
+            <a class="p-2" href="../Public/admin.html">Admin</a>
             <a class="p-2" id="color" onclick="document.getElementById('mainLogin').style.display='block'" style="width:auto;">Login |</a>
                 </div>
                  
@@ -33,7 +33,7 @@
       </header>
   <!-- Main jumbotron/header-->
   <div class="jumbotron" id="jumbo1">
-      <img src="../Public/images/RedeployRndLogo (1).png" alt="Avatar" style="width:450px;" id="logo">
+      <img src="../Public/images/RedeployRndLogo.png" alt="Avatar" style="width:450px;" id="logo">
          </div>
     
   <!-- Main Jumbotron/Header end -->
@@ -46,7 +46,7 @@
       <form class="modal-content animate" action="/action_page.php">
         <div class="imgcontainer">
           <span onclick="document.getElementById('mainLogin').style.display='none'" class="close" title="Close Modal">&times;</span>
-          <h5><font color="red">RE</font></h5><img src="http://clipart-library.com/img1/685573.jpg" alt="Avatar" style="width:100px; height:100px;" class="avatar"><h5>Deploy</h5>
+          <h5><font color="red">RE</font></h5><img src="../Public/images/RedeployRndLogo.png" alt="Avatar" style="width:100px; height:100px;" class="avatar"><h5>Deploy</h5>
         </div>
     
         <div class="container" id="login">
@@ -84,7 +84,7 @@
          <form class="modal-content animate">
           <div class="imgcontainer">
             <span onclick="document.getElementById('signUp').style.display='none'" class="close" title="Close Modal">&times;</span>
-            <h5><font color="red">RE</font></h5><img src="http://clipart-library.com/img1/685573.jpg" alt="Avatar" style="width:100px; height:100px;" class="avatar"><h5>Deploy</h5>
+            <h5><font color="red">RE</font></h5><img src="../Public/images/RedeployRndLogo.png" alt="Avatar" style="width:100px; height:100px;" class="avatar"><h5>Deploy</h5>
           </div> 
        
             <div class="container" id="register">
@@ -185,10 +185,10 @@
       <form class="modal-content animate">
           <div class="imgcontainer">
             <span onclick="document.getElementById('supplies').style.display='none'" class="close" title="Close Modal">&times;</span>
-            <h5><font color="red">RE</font></h5><img src="http://clipart-library.com/img1/685573.jpg" alt="Avatar" style="width:100px; height:100px;" class="avatar"><h5>Deploy</h5>
+            <h5><font color="red">RE</font></h5><img src="../Public/images/RedeployRndLogo.png" alt="Avatar" style="width:100px; height:100px;" class="avatar"><h5>Deploy</h5>
           </div>
       
-          <div class="container">
+          <div class="container" id="supplierform">
             <label for="Item"><b>Item Description</b></label>
             <input type="text" id="item" placeholder="Item Name/Description" name="Item" required>
       
@@ -196,25 +196,25 @@
             <input type="text" id="quantity" placeholder="Enter Quantity" name="Quantity" required>
            
             <label for="unit"><b>Unit</b></label>
-                                          <select class="custom-select d-block w-100" id="unit" required>
+                                          <select class="custom-select d-block w-100" id="unitlist" required>
                                             <option value="">Choose...</option>
-                                            <option>Tube</option>
-                                            <option>Bottle</option>
-                                            <option>Box</option>
-                                            <option>case</option>
-                                            <option>Other</option>
+                                            <option value="Tube">Tube</option>
+                                            <option value="Bottle">Bottle</option>
+                                            <option value="Box">Box</option>
+                                            <option value="Case">Case</option>
+                                            <option value="Roll">Roll</option>
                                           </select>
                                           <div class="invalid-feedback">
                                             Please provide a valid Unit.
                                           </div>
             <label for="charity"><b>Charity</b></label>
-                                          <select class="custom-select d-block w-100" id="charity" required>
+                                          <select class="custom-select d-block w-100" id="charitylist" required>
                                             <option value="">Choose...</option>
-                                            <option>AmeriCares</option>
-                                            <option>Doctors Without Borders</option>
-                                            <option>International Relief Teams</option>
-                                            <option>American Red Cross</option>
-                                            <option>Direct Relief</option>
+                                            <option value="AmeriCares">AmeriCares</option>
+                                            <option value="Doctors Without Borders">Doctors Without Borders</option>
+                                            <option value="International Relief Teams">International Relief Teams</option>
+                                            <option value="American Red Cross">American Red Cross</option>
+                                            <option value="Direct Relief">Direct Relief</option>
                                           </select>
                                           <div class="invalid-feedback">
                                             Please provide a valid Unit.
@@ -234,7 +234,7 @@
         <form class="modal-content animate" action="/action_page.php">
           <div class="imgcontainer">
             <span onclick="document.getElementById('donations').style.display='none'" class="close" title="Close Modal">&times;</span>
-            <h5><font color="red">RE</font></h5><img src="http://clipart-library.com/img1/685573.jpg" alt="Avatar" style="width:100px; height:100px;" class="avatar"><h5>Deploy</h5>
+            <h5><font color="red">RE</font></h5><img src="../Public/images/RedeployRndLogo.png" alt="Avatar" style="width:100px; height:100px;" class="avatar"><h5>Deploy</h5>
           </div>
       
           <div class="container" id="login">
@@ -278,7 +278,7 @@
             <form class="modal-content animate" action="/action_page.php">
               <div class="imgcontainer">
                 <span onclick="document.getElementById('charities').style.display='none'" class="close" title="Close Modal">&times;</span>
-                <h5><font color="red">RE</font></h5><img src="http://clipart-library.com/img1/685573.jpg" alt="Avatar" style="width:100px; height:100px;" class="avatar"><h5>Deploy</h5>
+                <h5><font color="red">RE</font></h5><img src="../Public/images/RedeployRndLogo.png" alt="Avatar" style="width:100px; height:100px;" class="avatar"><h5>Deploy</h5>
               </div>
           <!--AmeriCares info-->
               <div class="container">
@@ -289,7 +289,7 @@
                     </div>
                 <div class="row">
                   <div class="col-lg-4">
-                    <img src="../../public/images/amer.PNG" alt="Girl in a jacket" style="width:369px;height:306px;">
+                    <img src="../Public/images/amer.PNG" alt="Girl in a jacket" style="width:369px;height:306px;">
                       </div>
                       <div class="col-lg-8">
                           <p>On April 4, 1975, a U.S. jet carrying 243 Vietnamese orphans for Operation Babylift crashed into the jungle outside of Tan Son Nhut. A third of the children died in the accident; the surviving children, many critically injured, awaited rescue.
@@ -311,7 +311,7 @@
                         </div>
                     <div class="row">
                       <div class="col-lg-4">
-                        <img src="../../public/images/borders.PNG" alt="Girl in a jacket" style="width:369px;height:284px;">
+                        <img src="../Public/images/borders.PNG" alt="Girl in a jacket" style="width:369px;height:284px;">
                           </div>
                           <div class="col-lg-8">
                               <p>During the Nigerian Civil War of 1967 to 1970, the Nigerian military formed a blockade around the nation's newly independent south-eastern region, Biafra. At this time, France was the only major country supportive of the Biafrans (the United Kingdom, the Soviet Union and the United States sided with the Nigerian government), and the conditions within the blockade were unknown to the world. A number of French doctors volunteered with the French Red Cross to work in hospitals and feeding centres in besieged Biafra.[3] One of the co-founders of the organisation was Bernard Kouchner, who later became a high-ranking French politician.
@@ -330,7 +330,7 @@
                               </div>
                           <div class="row">
                             <div class="col-lg-4">
-                              <img src="../../public/images/teams.PNG" alt="Girl in a jacket" style="width:369px;height:284px;">
+                              <img src="../Public/images/teams.PNG" alt="Girl in a jacket" style="width:369px;height:284px;">
                                 </div>
                                 <div class="col-lg-8">
                                     <p>In 1986, San Diego attorney and real estate broker Barry La Forgia, participated on a mission trip to Peru where he helped construct shelters for impoverished people living in the Amazon Jungle. He was so moved by the experience and the desperate needs in the world that he returned to San Diego, left his law and real estate practices, and in March of 1988 formed Southwest Medical Teams.
@@ -352,7 +352,7 @@
                                     </div>
                                 <div class="row">
                                   <div class="col-lg-4">
-                                    <img src="../../public/images/redCross.PNG" alt="Girl in a jacket" style="width:369px;height:352px;">
+                                    <img src="../Public/images/redCross.PNG" alt="Girl in a jacket" style="width:369px;height:352px;">
                                       </div>
                                       <div class="col-lg-8">
                                           <p>Clara Barton (1821–1912) founded the American chapter after learning of the Red Cross in Geneva, Switzerland. In 1869, she went to Europe and became involved in the work of the International Red Cross during the Franco-Prussian War. She was determined to bring the organization to America.
@@ -377,7 +377,7 @@
                                           </div>
                                       <div class="row">
                                         <div class="col-lg-4">
-                                          <img src="../../public/images/relief.PNG" alt="Girl in a jacket" style="width:369px;height:284px;">
+                                          <img src="../Public/images/relief.PNG" alt="Girl in a jacket" style="width:369px;height:284px;">
                                             </div>
                                             <div class="col-lg-8">
                                                 <p>In 1945, William Zimdin, an Estonian immigrant to the United States and businessman, began sending thousands of relief parcels to relatives, friends, and former employees in Europe the aftermath of World War II. In 1948, Zimdin formalized his efforts with the establishment of the William Zimdin Foundation. Dezso Karczag, a Hungarian immigrant assumed management of the foundation following Zimdin's death in 1951. Karczag changed the organization's name to 'Direct Relief Foundation' in 1957. The organization assumed the name "Direct Relief International" in 1982, and "Direct Relief" in 2013.
@@ -416,14 +416,14 @@
                                </div>
                                <div class="row">
                                  <div class="col-lg-4">
-                                   <div class="icon"><img src="http://clipart-library.com/images/yikrLMzET.png" alt="Heart Icon" style="width:80px; height:80px;"></div>
+                                   <div class="icon"><img src="../Public/images/heart.png" alt="Heart Icon" style="width:80px; height:80px;"></div>
                                   
                                    <h2>Compassion</h2>
                                    <p>We believe in medical relief for all humanity.</p>
                                    
                                  </div>
                                  <div class="col-lg-4">
-                                   <div class="icon"><img src="http://accessinfotechindia.com/wp-content/uploads/2016/12/Commitment-icons-150x150.png" alt="Heart Icon" style="width:80px; height:80px;"></div>
+                                   <div class="icon"><img src="../Public/images/shaking-hands.png" alt="Heart Icon" style="width:80px; height:80px;"></div>
                                    
                                    <h2>Commitment</h2>
                                    <p>We are committed to operational excellence and delivery for every client.</p>
@@ -439,7 +439,7 @@
                                  </div>
                                </div>
                                
-                               <img src="../../public/images/world.PNG" alt="Girl in a jacket" style="width:1037px;height:500px;" id="world">
+                               <img src="../Public/images/world.PNG" alt="Girl in a jacket" style="width:1037px;height:500px;" id="world">
                              
                                <!--Our Mission 3 columns cards ends-->
 
@@ -498,7 +498,7 @@
     <div class="row" id="chat">
       <div class=" col-lg-1">
         
-        <a onclick="openForm()"><img border="0" alt="W3Schools" src="https://freepngimg.com/thumb/live_chat/10-2-live-chat-png-file.png" width="100" height="100"></a>
+        <a onclick="openForm()"><img border="0" alt="W3Schools" src="../Public/images/live-chat-png-file.png" width="100" height="100"></a>
         
         <div class="chat-popup" id="myForm">
           <form action="/action_page.php" class="form-container">
@@ -538,7 +538,9 @@ function closeForm() {
 </script>
                                       
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="../public/js/index.js"></script>
+<script src="/Public/js/index.js"></script>
+<script src="/Public/js/account.js"></script>
+<script src="/Public/js/supplies.js"></script>
 </body>
                                      
 </html>

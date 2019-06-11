@@ -2,7 +2,6 @@ body{
   background-color:rgb(240, 234, 223);
 }
 
-/* Gives new back ground to cards */
 #supplies,#donations,#charities,#signUp,#id02{
   background-image:url(http://www.westcpapc.com/wp-content/uploads/2014/09/Hands-Holding-World.jpg); 
   background-position: 0px;

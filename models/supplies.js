@@ -22,7 +22,6 @@ module.exports = function(sequelize, DataTypes) {
     },
     status: {
       type: DataTypes.STRING,
-      isNull: true,
       defaultValue: "Processing"
     }
   });
