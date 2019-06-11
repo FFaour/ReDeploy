@@ -7,11 +7,23 @@ module.exports = function(app) {
       res.json(result);
     });
   });
-  //Get all donations
-  app.get("/api/donations", function(req, res) {
-    db.Donation.findAll({}).then(function(result) {
-      res.json(result);
-    });
+
+  // POST route for saving a new donation
+  // eslint-disable-next-line prettier/prettier
+  app.post("/api/supplies/:description/:quantity/:unit/:charity", function(req,res) {
+    console.log(req.body);
+    // Check for valid parameters before adding to the database
+    if ((req.params.quantity = "number" && req.params.quantity !== 0)) {
+      db.Supplies.create({
+        // eslint-disable-next-line camelcase
+        item_description: req.params.description,
+        quantity: req.params.quantity,
+        unit: req.params.unit,
+        charity: req.params.charity
+      }).then(function(dbPost) {
+        res.json(dbPost);
+      });
+    }
   });
 
   // Create a new account

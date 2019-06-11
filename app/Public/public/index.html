@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../Public/styles/styles.css" media="screen" title="no title" charset="utf-8">
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  
+  <title>Home Page</title>
+</head>
+
+
+<body>
+
+    <header>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a class="p-2" href="#card5">Contact</a>
+            <a class="p-2" href="#card5">Location</a>
+            <a class="p-2" href="#us">Mission</a>
+            <a class="p-2" href="#card">Donate</a>
+            <a class="p-2" href="../public/admin.html">Admin</a>
+            <a class="p-2" id="color" onclick="document.getElementById('mainLogin').style.display='block'" style="width:auto;">Login |</a>
+                </div>
+                 
+                
+                <div id="main">
+                  
+                      <span style="font-size:30px;cursor:pointer;position: relative;left: -720px;top: -40vh;" id="links" onclick="openNav()">☰ </span>
+                </div>
+      </header>
+  <!-- Main jumbotron/header-->
+  <div class="jumbotron" id="jumbo1">
+      <img src="../Public/images/RedeployRndLogo (1).png" alt="Avatar" style="width:450px;" id="logo">
+         </div>
+    
+  <!-- Main Jumbotron/Header end -->
+  
+       
+
+    <!-- Login Modal info -->
+    <div id="mainLogin" class="modal">
+      
+      <form class="modal-content animate" action="/action_page.php">
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('mainLogin').style.display='none'" class="close" title="Close Modal">&times;</span>
+          <h5><font color="red">RE</font></h5><img src="http://clipart-library.com/img1/685573.jpg" alt="Avatar" style="width:100px; height:100px;" class="avatar"><h5>Deploy</h5>
+        </div>
+    
+        <div class="container" id="login">
+          
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+    
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+            
+          <button type="submit" id="loginButton">Login</button>
+
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+        </div>
+    
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('mainLogin').style.display='none'" class="cancelbtn">Cancel</button>
+          <span class="psw" id="color1" onclick="document.getElementById('signUp').style.display='block'" style="width:auto;">Create an account</span>
+        </div>
+      </form>
+    </div>
+  
+    <!--Login Modal info ends-->
+
+    
+    <br>
+    <br>
+    
+     <!-- Create Account Modal  -->
+     <div class="container">
+      <div id="signUp" class="modal">
+        
+         <form class="modal-content animate">
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('signUp').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <h5><font color="red">RE</font></h5><img src="http://clipart-library.com/img1/685573.jpg" alt="Avatar" style="width:100px; height:100px;" class="avatar"><h5>Deploy</h5>
+          </div> 
+       
+            <div class="container" id="register">
+
+            <label for="User Name"><b>Username</b></label>
+            <input type="text" id="userName" placeholder="" name="User Name" required>
+          
+            <label for="Password"><b>Password</b></label>
+            <input type="text" id="password" placeholder="" name="Password" required>
+
+            <label for="Organization"><b>Organization</b></label>
+            <input type="text" id="organization" placeholder="Enter Organization Name" name="Organization">
+      
+            <label for="Address"><b>Street Address</b></label>
+            <input type="text" id="address" placeholder="Enter Street Address" name="Address" required>
+
+            <label for="State"><b>State</b></label>
+            <input type="text" id="state" placeholder="Enter State" name="State" required>
+
+            <label for="State"><b>City</b></label>
+            <input type="text" id="city" placeholder="Enter City" name="city" required>
+
+            <label for="Zip Code"><b>Zipcode</b></label>
+            <input type="text" id="zipCode" placeholder="Enter Zip Code" name="Zip Code" required>
+
+            <label for="Contact Name"><b>Contact name</b></label>
+            <input type="text" id="contName" placeholder="Enter Contact Name" name="Contact Name" required>
+
+            <label for="Phone Number"><b>Phone number</b></label>
+            <input type="text" id="phoneNum" placeholder="Enter Phone Number" name="Phone Number" required>
+
+            <label for="Fax Number"><b>Fax number</b></label>
+            <input type="text" id="faxNum" placeholder="Enter Fax Number" name="Fax Number" required>
+
+            <label for="Email Address"><b>Email</b></label> 
+            <input type="text" id="email" placeholder="Enter Email" name="Email Address" required>
+
+                          
+            <button type="submit" id="submitAccountBtn">Submit</button>
+            <!-- add logic for submitting info -->
+            
+            <button type="button" id="test1" onclick="document.getElementById('signUp').style.display='none'" class="cancelbtn2">Cancel</button>
+         
+        </form> 
+       </div> 
+      </div>  
+            
+        <!-- Sign up modal ends -->
+    
+    
+    <!--3 Card body-->
+
+    
+    
+    <div class="container" id="card">
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="row">
+            <div class=" col-lg-6"> 
+            <div class="card-deck mb-6 text-center">
+        <div class="card mb-6 shadow-sm motioncard1"> 
+          <div class="card-header motioncard1">
+            <h4 class="my-6 font-weight-normal">Supplies</h4>
+          </div>
+          <div class="card-body" id="card1">
+              
+               <button onclick="document.getElementById('supplies').style.display='block'" id="btn1">Click to Donate</button>
+             </div>
+          </div>
+        </div> 
+      </div>
+   
+   
+      
+          <div class=" col-lg-6"> 
+          <div class="card-deck mb-6 text-center">
+      <div class="card mb-6 shadow-sm motioncard1"> 
+        <div class="card-header motioncard1">
+          <h4 class="my-6 font-weight-normal">Charities</h4>
+        </div>
+        <div class="card-body" id="card3">
+            
+             <button onclick="document.getElementById('charities').style.display='block'" id="btn1">Click to Donate</button>
+           </div>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </div>        
+    
+
+  <!-- Modal Forms for the cards -->
+  <div class="container">
+  <div id="supplies" class="modal">
+  
+      <form class="modal-content animate">
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('supplies').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <h5><font color="red">RE</font></h5><img src="http://clipart-library.com/img1/685573.jpg" alt="Avatar" style="width:100px; height:100px;" class="avatar"><h5>Deploy</h5>
+          </div>
+      
+          <div class="container">
+            <label for="Item"><b>Item Description</b></label>
+            <input type="text" id="item" placeholder="Item Name/Description" name="Item" required>
+      
+            <label for="Quantity"><b>Quantity</b></label>
+            <input type="text" id="quantity" placeholder="Enter Quantity" name="Quantity" required>
+           
+            <label for="unit"><b>Unit</b></label>
+                                          <select class="custom-select d-block w-100" id="unit" required>
+                                            <option value="">Choose...</option>
+                                            <option>Tube</option>
+                                            <option>Bottle</option>
+                                            <option>Box</option>
+                                            <option>case</option>
+                                            <option>Other</option>
+                                          </select>
+                                          <div class="invalid-feedback">
+                                            Please provide a valid Unit.
+                                          </div>
+            <label for="charity"><b>Charity</b></label>
+                                          <select class="custom-select d-block w-100" id="charity" required>
+                                            <option value="">Choose...</option>
+                                            <option>AmeriCares</option>
+                                            <option>Doctors Without Borders</option>
+                                            <option>International Relief Teams</option>
+                                            <option>American Red Cross</option>
+                                            <option>Direct Relief</option>
+                                          </select>
+                                          <div class="invalid-feedback">
+                                            Please provide a valid Unit.
+                                          </div>
+
+            <button type="submit" id="submitSupplyBtn">Submit</button>
+            
+            <button type="button" onclick="document.getElementById('supplies').style.display='none'" class="cancelbtn2">Cancel</button>
+         
+        </form>
+    </div>
+  </div> 
+    <!--Model card 3-->
+    <div class="container">
+    <div id="donations" class="modal">
+  
+        <form class="modal-content animate" action="/action_page.php">
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('donations').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <h5><font color="red">RE</font></h5><img src="http://clipart-library.com/img1/685573.jpg" alt="Avatar" style="width:100px; height:100px;" class="avatar"><h5>Deploy</h5>
+          </div>
+      
+          <div class="container" id="login">
+            <label for="uname"><b>Enter Amount</b></label>
+            <input type="text" placeholder="Item Name/Description" name="" required>
+      
+            <label for="psw"><b>Name on Card</b></label>
+            <input type="text" placeholder="Enter Card Type" name="" required>
+
+            <label for="psw"><b>Card Number</b></label>
+            <input type="text" placeholder="Enter Card Number" name="" required>
+
+            <label for="psw"><b>Zipcode</b></label>
+            <input type="text" placeholder="Enter Zip Code" name="" required>
+
+            <label for="psw"><b>CSC Code</b></label>
+            <input type="text" placeholder="Enter CSC code" name="" required>
+
+            
+            <label for="state">Charity?</label>
+                                        <select class="custom-select d-block w-100" id="charity" required>
+                                          <option value="">Choose...</option>
+                                          <option>Yes</option>
+                                          <option>No</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                          Please provide a valid Answer.
+                                        </div>
+              
+            <button type="submit">Submit</button>
+            
+            <button type="button" onclick="document.getElementById('donations').style.display='none'" class="cancelbtn2">Cancel</button>
+         
+        </form>
+      </div>
+    </div> 
+
+    <div class="container">
+        <div id="charities" class="modal">
+      
+            <form class="modal-content animate" action="/action_page.php">
+              <div class="imgcontainer">
+                <span onclick="document.getElementById('charities').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <h5><font color="red">RE</font></h5><img src="http://clipart-library.com/img1/685573.jpg" alt="Avatar" style="width:100px; height:100px;" class="avatar"><h5>Deploy</h5>
+              </div>
+          <!--AmeriCares info-->
+              <div class="container">
+                  <div class="row">
+                      <div class="col-lg-12">
+                        <h1>AmeriCares</h1>
+                      </div>
+                    </div>
+                <div class="row">
+                  <div class="col-lg-4">
+                    <img src="../../public/images/amer.PNG" alt="Girl in a jacket" style="width:369px;height:306px;">
+                      </div>
+                      <div class="col-lg-8">
+                          <p>On April 4, 1975, a U.S. jet carrying 243 Vietnamese orphans for Operation Babylift crashed into the jungle outside of Tan Son Nhut. A third of the children died in the accident; the surviving children, many critically injured, awaited rescue.
+                              The United States government announced that it would not have rescue resources available for at least 10 days.  When Robert Macauley learned about the situation he decided to respond on his own. Macauley and his wife, Leila, mortgaged their home to charter a Boeing 747 from World Airways to rescue the orphans. Within 48 hours, the children arrived safely in California.
+                              In 1981, after hearing about the rescue mission, Pope John Paul II asked Macauley to raise funds that would provide medicine for people suffering under martial law in Poland. In March, 1982, the first airlift delivering medicines to Poland was launched, and Americares was born.
+                              Macauley served as the CEO of Americares from 1979 to 2002, and Chairman of the Board until his death in 2010.
+                              In 2013, Americares works with a worldwide network of more than 3,000 hospitals, clinics, and community health programs that work in partnership with donors, pharmaceutical companies and medical supply manufacturers to deliver humanitarian aid and medical supplies around the world.</p>
+                        </div>
+                          </div>
+
+                          <br>
+                          <br>
+
+                  <!--Doc with out borders info-->
+                      <div class="row">
+                          <div class="col-lg-12">
+                            <h1>Doctors Without Borders</h1>
+                          </div>
+                        </div>
+                    <div class="row">
+                      <div class="col-lg-4">
+                        <img src="../../public/images/borders.PNG" alt="Girl in a jacket" style="width:369px;height:284px;">
+                          </div>
+                          <div class="col-lg-8">
+                              <p>During the Nigerian Civil War of 1967 to 1970, the Nigerian military formed a blockade around the nation's newly independent south-eastern region, Biafra. At this time, France was the only major country supportive of the Biafrans (the United Kingdom, the Soviet Union and the United States sided with the Nigerian government), and the conditions within the blockade were unknown to the world. A number of French doctors volunteered with the French Red Cross to work in hospitals and feeding centres in besieged Biafra.[3] One of the co-founders of the organisation was Bernard Kouchner, who later became a high-ranking French politician.
+                                After entering the country, the volunteers, in addition to Biafran health workers and hospitals, were subjected to attacks by the Nigerian army, and witnessed civilians being murdered and starved by the blockading forces. The doctors publicly criticised the Nigerian government and the Red Cross for their seemingly complicit behaviour. These doctors concluded that a new aid organisation was needed that would ignore political/religious boundaries and prioritise the welfare of victims.</p>
+                              </div>
+                            </div>
+
+                            <br>
+                            <br>
+
+                            <!-- International Relief Teams info -->
+                            <div class="row">
+                                <div class="col-lg-12">
+                                  <h1>International Relief Teams</h1>
+                                </div>
+                              </div>
+                          <div class="row">
+                            <div class="col-lg-4">
+                              <img src="../../public/images/teams.PNG" alt="Girl in a jacket" style="width:369px;height:284px;">
+                                </div>
+                                <div class="col-lg-8">
+                                    <p>In 1986, San Diego attorney and real estate broker Barry La Forgia, participated on a mission trip to Peru where he helped construct shelters for impoverished people living in the Amazon Jungle. He was so moved by the experience and the desperate needs in the world that he returned to San Diego, left his law and real estate practices, and in March of 1988 formed Southwest Medical Teams.
+                                      The concept of the newly formed organization was to link people in need with teams of volunteers who had the skills (both medical and non-medical) to meet those needs. By the end of 1988, Southwest Medical Teams had sent volunteer teams to Oaxaca, Mexico to build a healthcare clinic, to the island of Jamaica to provide emergency care for victims of Hurricane Gilbert, and to Armenia to treat thousands of people injured by one of the largest earthquakes of the century.
+                                      In 1996 the name was changed to International Relief Teams to more adequately reflect the work of the organization. Throughout the years, International Relief Teams has responded to disasters and/or conducted programs in the United States, Central and South America, Eastern Europe, Asia, the South Pacific and Africa.</p>
+                                    </div>
+                                  </div>
+
+                                  
+                                  <br>
+                                  <br>
+
+
+                                  <!-- Red Cross info -->
+                                  <div class="row">
+                                      <div class="col-lg-12">
+                                        <h1>American Red Cross</h1>
+                                      </div>
+                                    </div>
+                                <div class="row">
+                                  <div class="col-lg-4">
+                                    <img src="../../public/images/redCross.PNG" alt="Girl in a jacket" style="width:369px;height:352px;">
+                                      </div>
+                                      <div class="col-lg-8">
+                                          <p>Clara Barton (1821–1912) founded the American chapter after learning of the Red Cross in Geneva, Switzerland. In 1869, she went to Europe and became involved in the work of the International Red Cross during the Franco-Prussian War. She was determined to bring the organization to America.
+                                              Barton became President of the American branch of the society, known as the American National Red Cross in May 1881 in Washington. The first chapters opened in upstate New York, where she had connections.[12] Ultimately, John D. Rockefeller and four others donated money to help create a national headquarters near the White House.[13] Frederick Douglass, famed abolitionist and friend of Clara Barton offered advice and support as Barton sought to establish the American chapter or the global Red Cross network. As Register of Deeds for the District of Columbia, Douglass also signed the original Articles of Incorporation for the American Red Cross.
+                                              American Red Cross Administrative Headquarters in Washington, D.C.
+                                              American National Red Cross
+                                              Barton led one of the group's first major relief efforts, a response to the September 4–6, 1881 Great Fire of 1881 (Thumb Fire) in the Thumb region of Michigan. Over 5,000 people were left homeless. The next major disaster was the Johnstown Flood, which occurred on May 31, 1889. Over 2,209 people died and thousands more were injured in or near Johnstown, Pennsylvania in one of the worst disasters in United States history.</p>
+                                            </div>
+                                          </div>
+
+                                          <br>
+                                          <br>
+
+
+                                              
+
+                                        <!-- Direct Relief Info -->
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                              <h1>Direct Relief</h1>
+                                            </div>
+                                          </div>
+                                      <div class="row">
+                                        <div class="col-lg-4">
+                                          <img src="../../public/images/relief.PNG" alt="Girl in a jacket" style="width:369px;height:284px;">
+                                            </div>
+                                            <div class="col-lg-8">
+                                                <p>In 1945, William Zimdin, an Estonian immigrant to the United States and businessman, began sending thousands of relief parcels to relatives, friends, and former employees in Europe the aftermath of World War II. In 1948, Zimdin formalized his efforts with the establishment of the William Zimdin Foundation. Dezso Karczag, a Hungarian immigrant assumed management of the foundation following Zimdin's death in 1951. Karczag changed the organization's name to 'Direct Relief Foundation' in 1957. The organization assumed the name "Direct Relief International" in 1982, and "Direct Relief" in 2013.
+                                                  In September 2016, Direct Relief began working with Matthew Moffit after he raised $300 online for a non-profit called Child's Play in 2009. To raise the money, Moffit and friends played Legend of Zelda for about 36 hours straight while hosting a live online broadcast of their marathon. Several months later, Moffit raised $3,300 for the American Cancer Society.
+                                                  Direct Relief and Moffit partnered to produce Zeldathon. The charity is meant to be promoted to other gamers who would raise money for the group. Since Moffit and Direct Relief partnered, Direct Relief Gaming has raised $1.6M for the organization.
+                                                  In 2018, Direct Relief donated a record amount of medical supplies and direct funding to help local health centers in the U.S. along with 100+ other countries. Direct Relief provided about $1.2 billion worth of wholesale materials to health centers in 2018. In order to ensure the organization's ability to help no matter what the environmental conditions were, Direct Relief built a solar-powered and Tesla battery micro-grid on a warehouse in California to stay running at all times.</p>
+                                                </div>
+                                              </div>
+
+                                            </div> <!--ending div for info container-->
+                                                    
+                                                    
+
+                                            
+                                            <!-- <button type="button" onclick="document.getElementById('id04').style.display='none'" class="cancelbtn2">Cancel</button> -->
+                                         
+                                        </form>
+                                      </div>
+                                    </div> 
+                                <!-- Modal for cards end -->
+                            </div>
+                           </div> 
+                           <!--3 card body ends-->
+                      
+                           <br>
+                           
+                           
+                       
+                           <!-- Our mission 3 columns cards -->
+                             <div class="container marketing">
+                   
+                               <div class="row" id="us">
+                                 <div class="col-lg-12">
+                                   <h1>Our Mission:</h1>
+                                 </div>
+                               </div>
+                               <div class="row">
+                                 <div class="col-lg-4">
+                                   <div class="icon"><img src="http://clipart-library.com/images/yikrLMzET.png" alt="Heart Icon" style="width:80px; height:80px;"></div>
+                                  
+                                   <h2>Compassion</h2>
+                                   <p>We believe in medical relief for all humanity.</p>
+                                   
+                                 </div>
+                                 <div class="col-lg-4">
+                                   <div class="icon"><img src="http://accessinfotechindia.com/wp-content/uploads/2016/12/Commitment-icons-150x150.png" alt="Heart Icon" style="width:80px; height:80px;"></div>
+                                   
+                                   <h2>Commitment</h2>
+                                   <p>We are committed to operational excellence and delivery for every client.</p>
+                                   
+                                 </div>
+                                 <div class="col-lg-4">
+                                   <div class="icon"><img src="http://businesskeeda.com/asset/images/teamwork.svg" alt="Heart Icon" style="width:80px; height:80px;"></div>
+                                  
+                                   <h2>Collaboration</h2>
+                                   <p>
+                                       We partner with charities that uphold trusted reputations and maintain dedication to the ailing needs of the world.</p>
+                                  
+                                 </div>
+                               </div>
+                               
+                               <img src="../../public/images/world.PNG" alt="Girl in a jacket" style="width:1037px;height:500px;" id="world">
+                             
+                               <!--Our Mission 3 columns cards ends-->
+
+                       
+                    
+                               <!-- Footer -->
+                               <footer class="pt-4 my-md-5 pt-md-5 border-top" id="footer">
+                   
+                                   <div class="card-deck mb-3 text-center">
+                                     <!-- <div class="rows"> -->
+                                       <div class="card mb-4 shadow-sm  order-md-2" id="map1">
+                                         
+                                         <div class="card-body" id="card4">
+                                          <!-- map image is inside -->
+                                           
+                                         </div>
+                                       </div>
+                                      
+                       
+                       
+                                       <div class="card mb-4 shadow-sm  order-md-1">
+                                         <div class="card-header">
+                                           <h4 class="my-0 font-weight-normal">contact info</h4>
+                                         </div>
+                                         <div class="card-body" id="card5">
+                                             
+                                             <ul>
+                                               <li><h5>Address: 210 Technology Cir, Savannah, GA 31407</h5></li>
+                                               <li><h5>Phone Number: (912) 966-7922</h5></li>
+                                               <li><h5>Email: ThisIsNotReal@aol.com</h5></li>
+                                             </ul>
+                                             
+                                            </div>
+                       
+                                            
+                                          </div>
+                                          <!-- </div> -->
+                                          <div class="card mb-4 shadow-sm  order-md-2" id="map2">
+                                         
+                                             <div class="card-body" id="card4">
+                                              <!-- map image is inside -->
+                                               
+                                             </div>
+                                           </div>
+                                          
+                                        </div>
+
+                                        &copy;2019
+                                  
+                                       </footer>
+                                     </div>
+<!-- <button class="open-button" onclick="openForm()">Chat</button> -->
+
+<!-- Live Chat -->
+<div class="container">
+    <div class="row" id="chat">
+      <div class=" col-lg-1">
+        
+        <a onclick="openForm()"><img border="0" alt="W3Schools" src="https://freepngimg.com/thumb/live_chat/10-2-live-chat-png-file.png" width="100" height="100"></a>
+        
+        <div class="chat-popup" id="myForm">
+          <form action="/action_page.php" class="form-container">
+            <h2>Re+Deploy</h2>
+        
+            <label for="msg"><b>Message</b></label>
+            <textarea placeholder="Type message.." name="msg" required></textarea>
+        
+            <button type="submit" class="btn">Send</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+          </form>
+        </div>
+        <!-- <div class="icon"><img src="https://freepngimg.com/thumb/live_chat/10-2-live-chat-png-file.png" alt="Heart Icon" style="width:60px; height:60px;"></div> -->
+        
+        </div>
+      </div>
+    </div> 
+    <!-- live chat ends -->
+                                             
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  }
+      
+  function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  }
+
+  function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+
+</script>
+                                      
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="../public/js/index.js"></script>
+</body>
+                                     
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

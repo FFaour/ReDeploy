@@ -7,7 +7,8 @@ module.exports = function(sequelize, DataTypes) {
     },
     quantity: {
       type: DataTypes.INTEGER,
-      notNull: true
+      notNull: true,
+      validate: { min: 1, max: 999999999 }
     },
     unit: {
       type: DataTypes.STRING,
@@ -19,7 +20,8 @@ module.exports = function(sequelize, DataTypes) {
     },
     status: {
       type: DataTypes.STRING,
-      isNull: true
+      isNull: true,
+      defaultvalue: "Awaiting approval"
     }
   });
   return Supplies;
