@@ -63,11 +63,11 @@ top:10px;
 
 }
 
-#map{
+/* #map{
   position:absolute;
   top: 0px;
   left: 0px;
-}
+} */
 
 #fb{
   position: absolute;
@@ -528,4 +528,19 @@ header{
     margin-right: auto;
     width: 45%;
 
+}
+
+#search{
+  width:70px;
+  
+}
+
+#navbar{
+  background-color: navy;
+}
+
+
+.map {
+  height: 285px;
+  width: 100%;
 }

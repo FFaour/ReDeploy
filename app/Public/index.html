@@ -4,10 +4,10 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
-  <link rel="stylesheet" href="./styles/styles.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="../Public/styles/styles.css" media="screen" title="no title" charset="utf-8">
   <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-  
+    <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/build/ol.js"></script>
   <title>Home Page</title>
 </head>
 
@@ -447,19 +447,9 @@
                     
                                <!-- Footer -->
                                <footer class="pt-4 my-md-5 pt-md-5 border-top" id="footer">
-                   
-                                   <div class="card-deck mb-3 text-center">
-                                     <!-- <div class="rows"> -->
-                                       <div class="card mb-4 shadow-sm  order-md-2" id="map1">
-                                         
-                                         <div class="card-body" id="card4">
-                                          <!-- map image is inside -->
-                                           
-                                         </div>
-                                       </div>
-                                      
-                       
-                       
+                                                    
+                                       <div class="row">
+                                         <div class="col-lg-6">
                                        <div class="card mb-4 shadow-sm  order-md-1">
                                          <div class="card-header">
                                            <h4 class="my-0 font-weight-normal">contact info</h4>
@@ -473,79 +463,143 @@
                                              </ul>
                                              
                                             </div>
-                       
-                                            
-                                          </div>
-                                          <!-- </div> -->
-                                          <div class="card mb-4 shadow-sm  order-md-2" id="map2">
-                                         
-                                             <div class="card-body" id="card4">
-                                              <!-- map image is inside -->
-                                               
-                                             </div>
-                                           </div>
-                                          
-                                        </div>
-
-                                        &copy;2019
-                                  
-                                       </footer>
-                                     </div>
-<!-- <button class="open-button" onclick="openForm()">Chat</button> -->
-
-<!-- Live Chat -->
-<div class="container">
-    <div class="row" id="chat">
-      <div class=" col-lg-1">
-        
-        <a onclick="openForm()"><img border="0" alt="W3Schools" src="../Public/images/live-chat-png-file.png" width="100" height="100"></a>
-        
-        <div class="chat-popup" id="myForm">
-          <form action="/action_page.php" class="form-container">
-            <h2>Re+Deploy</h2>
-        
-            <label for="msg"><b>Message</b></label>
-            <textarea placeholder="Type message.." name="msg" required></textarea>
-        
-            <button type="submit" class="btn">Send</button>
-            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-          </form>
-        </div>
-        <!-- <div class="icon"><img src="https://freepngimg.com/thumb/live_chat/10-2-live-chat-png-file.png" alt="Heart Icon" style="width:60px; height:60px;"></div> -->
-        
-        </div>
-      </div>
-    </div> 
-    <!-- live chat ends -->
+                                            </div>
+                                            </div>
+                                           <div class="col-lg-6">
+                                              
+                                              <div id="map" class="map"></div>
                                              
-<script>
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-  }
-      
-  function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  }
+                                            </div>
+                                          </div>
+                                          &copy;2019
+                                        </footer>
+                                             
+                                          
+                                        <!-- <button class="open-button" onclick="openForm()">Chat</button> -->
+                                        
+                                        <!-- Live Chat -->
+                                        <div class="container">
+                                            <div class="row" id="chat">
+                                              <div class=" col-lg-1">
+                                                
+                                                <a onclick="openForm()"><img border="0" alt="W3Schools" src="../Public/images/live-chat-png-file.png" width="100" height="100"></a>
+                                                
+                                                <div class="chat-popup" id="myForm">
+                                                  <form action="/action_page.php" class="form-container">
+                                                    <h2>Re+Deploy</h2>
+                                                
+                                                    <label for="msg"><b>Message</b></label>
+                                                    <textarea placeholder="Type message.." name="msg" required></textarea>
+                                                
+                                                    <button type="submit" class="btn">Send</button>
+                                                    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                                                  </form>
+                                                </div>
+                                                <!-- <div class="icon"><img src="https://freepngimg.com/thumb/live_chat/10-2-live-chat-png-file.png" alt="Heart Icon" style="width:60px; height:60px;"></div> -->
+                                                
+                                                </div>
+                                              </div>
+                                            </div> 
+                                            <!-- live chat ends -->
+                                        
+                                             
+                                              <!-- <h2>My Map</h2>
+                                            <div id="map" class="map"></div> -->
+                                        
+                                           
+                                              <nav class="navbar navbar-expand-lg" id="navbar">
+                                                <a class="p-2" href="#jumbo1">Home</a>
+                                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                                  <span class="navbar-toggler-icon"></span>
+                                                </button>
+                                              
+                                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                                  <ul class="navbar-nav mr-auto">
+                                                    <li class="nav-item active">
+                                                      <a class="nav-link"  href="#us">Mission<span class="sr-only">(current)</span></a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                      <a class="nav-link"  href="#card">Donate</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                      <a class="nav-link"  href="../Public/admin.html">Admin</a>
+                                                    </li>
+                                                    
+                                                  </ul>
+                                                  <form class="form-inline my-2 my-lg-0" action="https://www.google.com/search" class="searchform" method="get" name="searchform" target="_blank">
+                                                  <input class="form-control mr-sm-2" name="sitesearch" type="hidden">
+                                                  <input class="form-control mr-sm-2" autocomplete="on" class="form-control search" name="q" placeholder="Enter Search" required="required"  type="text">
+                                                    <button class="btn btn-primary my-2 my-sm-0" id="search" type="submit">Search</button>
+                                                  </form>
+                                                </div>
+                                              </nav>
+                                        
+                                              
+                                              
+                                        
+                                                                                     
+                                        <script>
+                                          
+                                        var map = new ol.Map({
+                                                target: 'map',
+                                                layers: [
+                                                  new ol.layer.Tile({
+                                                    source: new ol.source.OSM()
+                                                  })
+                                                ],
+                                                view: new ol.View({
+                                                  center: ol.proj.fromLonLat([-81.211660, 32.168340]),
+                                                  zoom: 15
+                                                })
+                                              });
+                                        
+                                        
+                                        function openNav() {
+                                          document.getElementById("mySidenav").style.width = "250px";
+                                          }
+                                              
+                                          function closeNav() {
+                                          document.getElementById("mySidenav").style.width = "0";
+                                          }
+                                        
+                                          function openForm() {
+                                          document.getElementById("myForm").style.display = "block";
+                                        }
+                                        
+                                        function closeForm() {
+                                          document.getElementById("myForm").style.display = "none";
+                                          
+                                        }
+                                        
+                                        </script>
+                                        
+                                                                              
+                                        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                                        <script src="/Public/js/index.js"></script>
+                                        <script src="/Public/js/account.js"></script>
+                                        <script src="/Public/js/supplies.js"></script>
+                                        </body>
+                                                                             
+                                        </html>
 
-  function openForm() {
-  document.getElementById("myForm").style.display = "block";
-}
 
-function closeForm() {
-  document.getElementById("myForm").style.display = "none";
-}
 
-</script>
+
+
+
+
+
+                                                                                 
+                                            
                                       
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/Public/js/index.js"></script>
-<script src="/Public/js/account.js"></script>
-<script src="/Public/js/supplies.js"></script>
-</body>
-                                     
-</html>
-
-
+                       
+                       
+                                          
+                                          
+                                         
+                                          
+                                        
+                                                                             
 
 
 
