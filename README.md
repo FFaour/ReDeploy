@@ -1,4 +1,9 @@
 
+=======
+## Redeploy 
+![Logo](app/Public/images/RedeployRndLogo.png)
+
+
 # RE+DEPLOY
 ## A sequelized application that matches donated medical supplies to charities.
 ## https://redeploy-db.herokuapp.com/
