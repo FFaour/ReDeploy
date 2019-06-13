@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "password",
-    "database": "Test",
+    "password": "whit1982",
+    "database": "redeployDB",
     "host": "localhost",
     "port": 3306,
     "dialect": "mysql"
