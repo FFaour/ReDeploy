@@ -1,5 +1,5 @@
 ## Redeploy 
-![Logo](app/Public/images/redeploy2.png)
+![Logo](app/Public/images/RedeployRndLogo.png)
 
 ### A sequelized application that matches donated medical supplies to charities.
 
