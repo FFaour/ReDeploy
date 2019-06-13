@@ -19,11 +19,11 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       notNull: true
     },
-    state: {
+    city: {
       type: DataTypes.STRING,
       notNull: true
     },
-    city: {
+    state: {
       type: DataTypes.STRING,
       notNull: true
     },
