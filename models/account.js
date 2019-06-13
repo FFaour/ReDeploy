@@ -1,3 +1,5 @@
+// model name is Account
+// next define all the properties in Account
 module.exports = function(sequelize, DataTypes) {
   var Account = sequelize.define("account", {
     organization: {
@@ -46,5 +48,6 @@ module.exports = function(sequelize, DataTypes) {
       notNull: true
     }
   });
+
   return Account;
 };

@@ -1,4 +1,3 @@
-
 require("dotenv").config();
 var db = require("./models");
 var express = require("express");
@@ -19,10 +18,10 @@ require("./routes/supplier-routes.js")(app);
 require("./routes/htmlRoutes.js")(app);
 require("./routes/account-routes.js")(app);
 
+// ensures that data in server does not get cleared
 var syncOptions = { force: false };
 
-// // If running a test, set syncOptions.force to true
-// // clearing the `testdb`
+//If running a test, set syncOptions.force to true so that our data in server is cleared
 if (process.env.NODE_ENV === "test") {
   syncOptions.force = true;
 }
